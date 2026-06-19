@@ -50,7 +50,7 @@ WaitForReady(waitMs, key) {
 F13:: {
     global running
 
-    result := InputBox("How many loops?", "Save and Next", "w200 h100", "300")
+    result := InputBox("How many orders?", "Save and Next", "w200 h100", "300")
     if (result.Result = "Cancel")
         return
     loops := Integer(result.Value)
