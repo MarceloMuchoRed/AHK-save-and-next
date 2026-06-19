@@ -32,17 +32,18 @@ WaitIfCrashed() {
 }
 
 WaitForReady(waitMs, key) {
+    global winTitle
     Sleep waitMs
     WaitIfCrashed()
     DismissWarning(key)
-    if (ControlGetText("FNHELP1", winTitle) != "Ready") {
-        loop {
-            WaitIfCrashed()
-            DismissWarning(key)
+    loop {
+        WaitIfCrashed()
+        DismissWarning(key)
+        try {
             if (ControlGetText("FNHELP1", winTitle) = "Ready")
                 break
-            Sleep 50
         }
+        Sleep 50
     }
     DismissWarning(key)
 }
