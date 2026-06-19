@@ -17,18 +17,34 @@ DismissWarning(key) {
     }
 }
 
+WaitIfCrashed() {
+    global winTitle
+    if WinExist(winTitle " (Not Responding)") {
+        ToolTip "FAMOUS not responding — paused, waiting to recover..."
+        loop {
+            Sleep 2000
+            if !WinExist(winTitle " (Not Responding)")
+                break
+        }
+        ToolTip
+        Sleep 500
+    }
+}
+
 WaitForReady(waitMs, key) {
     Sleep waitMs
+    WaitIfCrashed()
     DismissWarning(key)
     if (ControlGetText("FNHELP1", winTitle) != "Ready") {
         loop {
+            WaitIfCrashed()
             DismissWarning(key)
             if (ControlGetText("FNHELP1", winTitle) = "Ready")
                 break
             Sleep 50
         }
     }
-    DismissWarning(key)  ; one final check after Ready returns
+    DismissWarning(key)
 }
 
 F13:: {
@@ -82,4 +98,3 @@ F14:: {
     MsgBox "Stopped."
 }
 
-; a ver si jala este pex
