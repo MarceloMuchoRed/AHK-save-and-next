@@ -1,70 +1,25 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
-winTitle    := "FAMOUS"
-warnTitle   := "Warning"
+CoordMode "Mouse", "Client"
 
-running := false
+winTitle := "FAMOUS"
+csvFile  := A_ScriptDir "\orders.csv"
 
-DismissWarning(key) {
-    global warnTitle, winTitle
-    if WinExist(warnTitle) {
-        WinActivate warnTitle
-        WinWaitActive warnTitle, , 2
-        Send key
-        Sleep 250
-        WinActivate winTitle
-    }
-}
-
-WaitIfCrashed() {
-    global winTitle
-    if WinExist(winTitle " (Not Responding)") {
-        ToolTip "FAMOUS not responding — paused, waiting to recover..."
-        loop {
-            Sleep 2000
-            if !WinExist(winTitle " (Not Responding)")
-                break
-        }
-        ToolTip
-        Sleep 500
-    }
-}
-
-WaitForReady(waitMs, key) {
-    global winTitle
-    Sleep waitMs
-    WaitIfCrashed()
-    DismissWarning(key)
-    loop {
-        WaitIfCrashed()
-        DismissWarning(key)
-        try {
-            if (ControlGetText("FNHELP1", winTitle) = "Ready")
-                break
-        }
-        Sleep 50
-    }
-    DismissWarning(key)
-}
+poFieldX    := 408
+poFieldY    := 30
+productX    := 330
+firstRowY   := 342
+rowHeight   := 20
 
 F13:: {
-    global running
-
-    result := InputBox("How many orders?", "Save and Next", "w200 h100", "300")
-    if (result.Result = "Cancel")
-        return
-    loops := Integer(result.Value)
-    if (loops < 1) {
-        MsgBox "Please enter a number greater than 0."
+    if !WinExist(winTitle) {
+        MsgBox "Window not found! Is FAMOUS open?"
         return
     }
 
-    running := true
-
-    if !WinExist(winTitle) {
-        MsgBox "Window not found! Is FAMOUS open?"
-        running := false
+    if !FileExist(csvFile) {
+        MsgBox "orders.csv not found in script folder!"
         return
     }
 
@@ -72,30 +27,51 @@ F13:: {
     WinMaximize winTitle
     WinWaitActive winTitle, , 3
 
-    loop loops {
-        if !running
-            break
-
-        WinActivate winTitle
-        Send "^s"
-        WaitForReady(350, "!y")   ; handles GL date warning during/after save
-        ToolTip "Order " A_Index " of " loops " done"
-        SetTimer () => ToolTip(), -500
-
-        if (A_Index = loops)
-            break
-
-        Send "{F7}"
-        WaitForReady(350, "!o")    ; handles notes warning during/after next
+    ; Read CSV
+    orders := []
+    loop read csvFile {
+        cols := StrSplit(A_LoopReadLine, ",")
+        if (cols.Length >= 2)
+            orders.Push({po: Trim(cols[1]), count: Integer(Trim(cols[2]))})
     }
 
-    running := false
-    MsgBox "Done — " loops " loops completed."
+    total := orders.Length
+
+    loop orders.Length {
+        order := orders[A_Index]
+
+        ; Type PO number
+        WinActivate winTitle
+        Click poFieldX, poFieldY
+        Sleep 200
+        Send order.po
+        Send "{Tab}"               ; load the order
+        Sleep 1000                 ; wait for order to load
+
+        ; Process each product
+        loop order.count {
+            rowY := firstRowY + (A_Index - 1) * rowHeight
+            Click productX, rowY
+            Sleep 300
+            Send "{Tab}"
+            Sleep 150
+            Send "{Tab}"
+            Sleep 150
+        }
+
+        ; Save
+        Send "^s"
+        Sleep 500
+
+        ToolTip "Order " A_Index " of " total " done (PO " order.po ")"
+        SetTimer () => ToolTip(), -2000
+        Sleep 300
+    }
+
+    MsgBox "Done — " total " orders processed."
 }
 
 F14:: {
-    global running
-    running := false
+    ToolTip
     MsgBox "Stopped."
 }
-
