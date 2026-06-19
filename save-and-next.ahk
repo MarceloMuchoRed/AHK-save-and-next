@@ -12,6 +12,44 @@ productX    := 330
 firstRowY   := 342
 rowHeight   := 20
 
+WaitIfCrashed() {
+    global winTitle
+    if WinExist(winTitle " (Not Responding)") {
+        ToolTip "FAMOUS not responding — paused, waiting to recover..."
+        loop {
+            Sleep 2000
+            if !WinExist(winTitle " (Not Responding)")
+                break
+        }
+        ToolTip
+        Sleep 500
+    }
+}
+
+WaitForReady() {
+    global winTitle
+    loop {
+        WaitIfCrashed()
+        try {
+            if (ControlGetText("FNHELP1", winTitle) = "Ready")
+                break
+        }
+        Sleep 50
+    }
+}
+
+WaitForChange() {
+    global winTitle
+    loop {
+        WaitIfCrashed()
+        try {
+            if (ControlGetText("FNHELP1", winTitle) != "Ready")
+                break
+        }
+        Sleep 50
+    }
+}
+
 F13:: {
     if !WinExist(winTitle) {
         MsgBox "Window not found! Is FAMOUS open?"
@@ -27,7 +65,6 @@ F13:: {
     WinMaximize winTitle
     WinWaitActive winTitle, , 3
 
-    ; Read CSV
     orders := []
     loop read csvFile {
         cols := StrSplit(A_LoopReadLine, ",")
@@ -40,32 +77,29 @@ F13:: {
     loop orders.Length {
         order := orders[A_Index]
 
-        ; Type PO number
         WinActivate winTitle
         Click poFieldX, poFieldY
         Sleep 200
         Send order.po
-        Send "{Tab}"               ; load the order
-        Sleep 1000                 ; wait for order to load
+        Send "{Tab}"
+        WaitForChange()
+        WaitForReady()
 
-        ; Process each product
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
             Click productX, rowY
-            Sleep 300
+            WaitForChange()
             Send "{Tab}"
             Sleep 150
             Send "{Tab}"
             Sleep 150
         }
 
-        ; Save
         Send "^s"
-        Sleep 500
+        WaitForReady()
 
         ToolTip "Order " A_Index " of " total " done (PO " order.po ")"
         SetTimer () => ToolTip(), -2000
-        Sleep 300
     }
 
     MsgBox "Done — " total " orders processed."
