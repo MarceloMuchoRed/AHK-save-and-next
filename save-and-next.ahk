@@ -73,4 +73,4 @@ F14:: {
     MsgBox "Stopped."
 }
 
-; this is a test
+; prueba 2
