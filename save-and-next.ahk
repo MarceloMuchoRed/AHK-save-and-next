@@ -72,3 +72,5 @@ F14:: {
     running := false
     MsgBox "Stopped."
 }
+
+; this is a test
