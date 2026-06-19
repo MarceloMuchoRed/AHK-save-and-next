@@ -73,4 +73,4 @@ F14:: {
     MsgBox "Stopped."
 }
 
-; prueba 2
+; ultima prueba shrek
