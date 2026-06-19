@@ -3,7 +3,7 @@
 
 winTitle    := "FAMOUS"
 warnTitle   := "Warning"
-loops       := 3
+loops       := 300
 
 running := false
 
