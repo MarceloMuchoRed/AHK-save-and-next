@@ -3,7 +3,6 @@
 
 winTitle    := "FAMOUS"
 warnTitle   := "Warning"
-loops       := 300
 
 running := false
 
@@ -34,6 +33,16 @@ WaitForReady(waitMs, key) {
 
 F13:: {
     global running
+
+    result := InputBox("How many loops?", "Save and Next", "w200 h100", "300")
+    if (result.Result = "Cancel")
+        return
+    loops := Integer(result.Value)
+    if (loops < 1) {
+        MsgBox "Please enter a number greater than 0."
+        return
+    }
+
     running := true
 
     if !WinExist(winTitle) {
