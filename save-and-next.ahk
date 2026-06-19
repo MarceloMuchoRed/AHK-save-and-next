@@ -6,8 +6,8 @@ CoordMode "Mouse", "Client"
 winTitle := "FAMOUS"
 csvFile  := A_ScriptDir "\orders.csv"
 
-poFieldX    := 408
-poFieldY    := 30
+poFieldX    := 370
+poFieldY    := 165
 productX    := 330
 firstRowY   := 342
 rowHeight   := 20
