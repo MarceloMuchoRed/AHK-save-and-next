@@ -69,34 +69,5 @@ F13:: {
 
 F14:: {
     ToolTip
-    MsgBox "Stopped."
-}
-
-; ── Debug: F15 toggles logging status bar control text + pixel color to file ──
-debugLogging := false
-debugFile    := A_ScriptDir "\debug-status.txt"
-
-F15:: {
-    global debugLogging
-    debugLogging := !debugLogging
-    ToolTip debugLogging ? "Debug logging ON" : "Debug logging OFF"
-    SetTimer () => ToolTip(), -2000
-
-    if debugLogging {
-        if FileExist(debugFile)
-            FileDelete debugFile
-        SetTimer LogStatus, 50
-    } else {
-        SetTimer LogStatus, 0
-    }
-}
-
-LogStatus() {
-    global debugFile
-    try {
-        focused      := ControlGetFocus(FAM_WIN)
-        focusedText  := ControlGetText(focused, FAM_WIN)
-        statusText   := ControlGetText("FNHELP1", FAM_WIN)
-        FileAppend A_TickCount " | status: " statusText " | focus: " focused " | focusText: " focusedText "`n", debugFile
-    }
+    ExitApp
 }
