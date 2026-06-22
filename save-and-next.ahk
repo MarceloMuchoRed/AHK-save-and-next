@@ -9,8 +9,6 @@ CoordMode "Pixel", "Client"
 
 csvFile  := A_ScriptDir "\orders.csv"
 
-poFieldX    := 370
-poFieldY    := 165
 productX    := 330
 firstRowY   := 342
 rowHeight   := 20
@@ -36,7 +34,7 @@ F13:: {
         order := orders[A_Index]
 
         WinActivate FAM_WIN
-        ClickPoField(poFieldX, poFieldY)
+        ClickPoField()
         Send order.po
         Send "{Enter}"
         WaitForOrderLoad(order.po)

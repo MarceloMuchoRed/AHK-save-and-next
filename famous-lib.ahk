@@ -9,6 +9,10 @@ STATUS_X     := 27
 STATUS_Y     := 1006
 STATUS_READY := "0xC5E6E6"
 
+; ── PO field coords (client coords) ──────────────────────────────────────────
+PO_FIELD_X := 370
+PO_FIELD_Y := 165
+
 ; ── Crash / ready helpers ────────────────────────────────────────────────────
 WaitIfCrashed() {
     if WinExist(FAM_WIN " (Not Responding)") {
@@ -85,13 +89,13 @@ DismissGLWarning() {
 
 ; ── UI helpers ───────────────────────────────────────────────────────────────
 ; Click the PO field
-ClickPoField(x, y) {
-    Click x, y
+ClickPoField() {
+    Click PO_FIELD_X, PO_FIELD_Y
 }
 
 ; Sweep mouse around the PO field area to clear product description from status bar
 ClearStatusBar() {
-    for coord in [[360, 160], [415, 160], [415, 175], [360, 175], [360, 160]] {
+    for coord in [[360, 160], [415, 160], [415, 175], [360, 175], [PO_FIELD_X, PO_FIELD_Y]] {
         MouseMove coord[1], coord[2], 5
         Sleep 50
     }
