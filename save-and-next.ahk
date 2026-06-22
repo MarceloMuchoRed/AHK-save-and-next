@@ -63,6 +63,7 @@ F13:: {
         FamSave()
         WaitForReady()
         DismissGLWarning()
+        WaitForReady()
 
         ToolTip "Order " A_Index " of " total " done (PO " order.po ")"
         SetTimer () => ToolTip(), -2000
