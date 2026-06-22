@@ -40,14 +40,19 @@ F13:: {
         WaitForOrderLoad(order.po)
         DismissNoteWarning()
 
+        Click 380, 255
+        Sleep 100
+        Send "NONBOB"
+
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
             Click productX, rowY
             WaitForChange()
+            WaitForReady()
             Send "{Tab}"
-            Sleep 150
+            Sleep 300
             Send "{Tab}"
-            Sleep 150
+            Sleep 300
         }
 
         ClearStatusBar()
