@@ -89,10 +89,10 @@ ClickPoField(x, y) {
     Click x, y
 }
 
-; Sweep mouse across the toolbar area to clear status bar without clicking anything
+; Sweep mouse around the PO field area to clear product description from status bar
 ClearStatusBar() {
-    loop 5 {
-        MouseMove 100 + (A_Index * 40), 50, 5
+    for coord in [[360, 160], [415, 160], [415, 175], [360, 175], [360, 160]] {
+        MouseMove coord[1], coord[2], 5
         Sleep 50
     }
 }
