@@ -38,7 +38,7 @@ F13:: {
         WinActivate FAM_WIN
         Click poFieldX, poFieldY
         Sleep 200
-        WaitForChange()       ; wait for status to leave Ready (field activates → "There are no notes.")
+        WaitForChange(500)    ; on first order status won't change — falls through after 500ms
         Send "^a"
         Send order.po
         Send "{Enter}"

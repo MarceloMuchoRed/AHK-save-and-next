@@ -34,13 +34,16 @@ WaitForReady() {
     }
 }
 
-WaitForChange() {
+WaitForChange(timeoutMs := 0) {
+    deadline := A_TickCount + timeoutMs
     loop {
         WaitIfCrashed()
         try {
             if (ControlGetText("FNHELP1", FAM_WIN) != "Ready")
                 break
         }
+        if (timeoutMs > 0 && A_TickCount >= deadline)
+            break
         Sleep 10
     }
 }
