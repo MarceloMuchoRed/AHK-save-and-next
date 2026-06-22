@@ -40,9 +40,12 @@ F13:: {
         WaitForOrderLoad(order.po)
         DismissNoteWarning()
 
+        Sleep 200
         Click 380, 255
         Sleep 100
         Send "NONBOB"
+        Send "{Tab}"
+        Sleep 100
 
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
