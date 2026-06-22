@@ -33,15 +33,12 @@ F13:: {
     loop orders.Length {
         order := orders[A_Index]
 
-        ToolTip "5 WinActivate"
+        DismissNoteWarning()
+        DismissGLWarning()
         WinActivate FAM_WIN
-        WinWaitActive FAM_WIN, , 3
+        WinWaitActive FAM_WIN, , 10
         WinMaximize FAM_WIN
-        ToolTip "6 about to ClickPoField"
-        Sleep 200
         ClickPoField()
-        ToolTip "7 after ClickPoField"
-        Sleep 200
         Sleep 150
         Send "^a"
         Send order.po
@@ -68,14 +65,9 @@ F13:: {
 
         ClearStatusBar()
         FamSave()
-        ToolTip "1 after FamSave"
         WaitForReady()
-        ToolTip "2 after WaitForReady"
         DismissGLWarning()
-        ToolTip "3 after DismissGLWarning"
         WaitForReady()
-        ToolTip "4 after second WaitForReady"
-        Sleep 200
 
         ToolTip "Order " A_Index " of " total " done (PO " order.po ")"
         SetTimer () => ToolTip(), -2000
