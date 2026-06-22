@@ -14,7 +14,6 @@ poFieldY    := 165
 productX    := 330
 firstRowY   := 342
 rowHeight   := 20
-orderLoadMs := 1500  ; tune this up if orders aren't fully loaded before products are clicked
 
 F13:: {
     if !WinCheck(FAM_WIN)
@@ -38,11 +37,11 @@ F13:: {
 
         WinActivate FAM_WIN
         Click poFieldX, poFieldY
-        Sleep 200
+        WaitForChange()       ; wait for status to leave Ready (field activates → "There are no notes.")
         Send "^a"
         Send order.po
         Send "{Enter}"
-        Sleep orderLoadMs
+        WaitForReady()        ; wait for status to return to Ready (order fully loaded)
         DismissNoteWarning()
 
         loop order.count {
