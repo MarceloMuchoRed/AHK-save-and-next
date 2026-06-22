@@ -39,7 +39,7 @@ F13:: {
         Sleep 200
         Send order.po
         Send "{Tab}"
-        Sleep 350
+        Sleep 950
         WaitForChange()
         WaitForReady()
         DismissNoteWarning()
