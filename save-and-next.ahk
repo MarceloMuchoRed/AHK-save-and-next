@@ -55,11 +55,11 @@ F13:: {
             Sleep 300
         }
 
-        Sleep 200
-        Click 380, 255
-        Sleep 200
-        Send "NONBOB"
-        Sleep 100
+        ; Sleep 200
+        ; Click 380, 255
+        ; Sleep 200
+        ; Send "NONBOB"
+        ; Sleep 100
 
         ClearStatusBar()
         FamSave()
