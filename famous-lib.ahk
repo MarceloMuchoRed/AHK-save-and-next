@@ -23,6 +23,18 @@ WaitIfCrashed() {
     }
 }
 
+WaitForOrderLoad(po) {
+    loop {
+        WaitIfCrashed()
+        try {
+            focused := ControlGetFocus(FAM_WIN)
+            if (ControlGetText("FNHELP1", FAM_WIN) = "Ready" && ControlGetText(focused, FAM_WIN) = po)
+                break
+        }
+        Sleep 10
+    }
+}
+
 WaitForReady() {
     loop {
         WaitIfCrashed()

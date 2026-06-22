@@ -37,12 +37,9 @@ F13:: {
 
         WinActivate FAM_WIN
         Click poFieldX, poFieldY
-        Sleep 200
-        WaitForChange(500)    ; on first order status won't change — falls through after 500ms
-        Send "^a"
         Send order.po
         Send "{Enter}"
-        WaitForReady()        ; wait for status to return to Ready (order fully loaded)
+        WaitForOrderLoad(order.po)
         DismissNoteWarning()
 
         loop order.count {
