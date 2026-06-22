@@ -46,11 +46,11 @@ F13:: {
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
             Click productX, rowY
-            WaitForChange()
+            WaitForChange(1000)
             Send "{Tab}"
-            Sleep 300
+            Sleep 500
             Send "{Tab}"
-            Sleep 300
+            Sleep 500
         }
 
         Sleep 200
