@@ -1,178 +1,106 @@
-26490625 | status: There are no notes. | focus: 67402 | focusText: 
-26490687 | status: There are no notes. | focus: 67402 | focusText: 
-26490750 | status: There are no notes. | focus: 67402 | focusText: 
-26490828 | status: There are no notes. | focus: 67402 | focusText: 
-26490875 | status: There are no notes. | focus: 67402 | focusText: 
-26490937 | status: There are no notes. | focus: 67402 | focusText: 
-26491000 | status: There are no notes. | focus: 67402 | focusText: 
-26491062 | status: There are no notes. | focus: 67402 | focusText: 
-26491125 | status: There are no notes. | focus: 67402 | focusText: 
-26491187 | status: There are no notes. | focus: 67402 | focusText: 
-26491250 | status: There are no notes. | focus: 67402 | focusText: 
-26491312 | status: There are no notes. | focus: 67402 | focusText: 
-26491375 | status: There are no notes. | focus: 67402 | focusText: 
-26491437 | status: There are no notes. | focus: 67402 | focusText: 
-26491500 | status: There are no notes. | focus: 67402 | focusText: 
-26491562 | status: There are no notes. | focus: 67402 | focusText: 
-26491625 | status: There are no notes. | focus: 67402 | focusText: 
-26491687 | status: There are no notes. | focus: 67402 | focusText: 
-26491750 | status: There are no notes. | focus: 67402 | focusText: 
-26491812 | status: There are no notes. | focus: 67402 | focusText: 
-26491875 | status: There are no notes. | focus: 67402 | focusText: 2
-26491937 | status: There are no notes. | focus: 67402 | focusText: 2
-26492000 | status: There are no notes. | focus: 67402 | focusText: 21
-26492078 | status: There are no notes. | focus: 67402 | focusText: 21
-26492125 | status: There are no notes. | focus: 67402 | focusText: 214
-26492187 | status: There are no notes. | focus: 67402 | focusText: 214
-26492250 | status: There are no notes. | focus: 67402 | focusText: 2142
-26492312 | status: There are no notes. | focus: 67402 | focusText: 2142
-26492375 | status: There are no notes. | focus: 67402 | focusText: 21429
-26492437 | status: There are no notes. | focus: 67402 | focusText: 21429
-26492500 | status: There are no notes. | focus: 67402 | focusText: 21429
-26492562 | status: There are no notes. | focus: 67402 | focusText: 21429
-26492625 | status: There are no notes. | focus: 67402 | focusText: 21429
-26492687 | status: There are no notes. | focus: 67402 | focusText: 21429
-26492750 | status: There are no notes. | focus: 67402 | focusText: 21429
-26494000 | status: Ready | focus: 67402 | focusText: 21429
-26494000 | status: Ready | focus: 67402 | focusText: 21429
-26494062 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494125 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494187 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494250 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494312 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494375 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494437 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494500 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494562 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494625 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494687 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494750 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494812 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494875 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26494937 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495000 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495062 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495125 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495187 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495250 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495328 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495375 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495437 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26495500 | status: Product Description: HOT PEPPER TOMATILLO 10# SPLIT Veg-Fresh MEXICO | focus: 67402 | focusText: 21429
-26496625 | status: There are no notes. | focus: 67402 | focusText: 
-26496640 | status: There are no notes. | focus: 67402 | focusText: 
-26496687 | status: There are no notes. | focus: 67402 | focusText: 21
-26496750 | status: There are no notes. | focus: 67402 | focusText: 21
-26496812 | status: There are no notes. | focus: 67402 | focusText: 21
-26496875 | status: There are no notes. | focus: 67402 | focusText: 214
-26496937 | status: There are no notes. | focus: 67402 | focusText: 214
-26497000 | status: There are no notes. | focus: 67402 | focusText: 214
-26497062 | status: There are no notes. | focus: 67402 | focusText: 214
-26497125 | status: There are no notes. | focus: 67402 | focusText: 2142
-26497187 | status: There are no notes. | focus: 67402 | focusText: 2142
-26497250 | status: There are no notes. | focus: 67402 | focusText: 2142
-26497312 | status: There are no notes. | focus: 67402 | focusText: 2142
-26497375 | status: There are no notes. | focus: 67402 | focusText: 2142
-26497437 | status: There are no notes. | focus: 67402 | focusText: 21428
-26497500 | status: There are no notes. | focus: 67402 | focusText: 21428
-26497562 | status: There are no notes. | focus: 67402 | focusText: 21428
-26497625 | status: There are no notes. | focus: 67402 | focusText: 21428
-26497687 | status: There are no notes. | focus: 67402 | focusText: 21428
-26498890 | status: Ready | focus: 67402 | focusText: 21428
-26498921 | status: Ready | focus: 67402 | focusText: 21428
-26498984 | status: Ready | focus: 67402 | focusText: 21428
-26499046 | status: Ready | focus: 67402 | focusText: 21428
-26499109 | status: Ready | focus: 67402 | focusText: 21428
-26499171 | status: Ready | focus: 67402 | focusText: 21428
-26499234 | status: Ready | focus: 67402 | focusText: 21428
-26499296 | status: Ready | focus: 67402 | focusText: 21428
-26499359 | status: Ready | focus: 67402 | focusText: 21428
-26499421 | status: Ready | focus: 67402 | focusText: 21428
-26499484 | status: Ready | focus: 67402 | focusText: 21428
-26499546 | status: Ready | focus: 67402 | focusText: 21428
-26499609 | status: Ready | focus: 67402 | focusText: 21428
-26499671 | status: Ready | focus: 67402 | focusText: 21428
-26499734 | status: Ready | focus: 67402 | focusText: 21428
-26499796 | status: Ready | focus: 67402 | focusText: 21428
-26499859 | status: Ready | focus: 67402 | focusText: 21428
-26499921 | status: Ready | focus: 67402 | focusText: 21428
-26499984 | status: Ready | focus: 67402 | focusText: 21428
-26501000 | status: There are no notes. | focus: 67402 | focusText: 
-26501000 | status: There are no notes. | focus: 67402 | focusText: 
-26501062 | status: There are no notes. | focus: 67402 | focusText: 
-26501125 | status: There are no notes. | focus: 67402 | focusText: 
-26501187 | status: There are no notes. | focus: 67402 | focusText: 
-26501250 | status: There are no notes. | focus: 67402 | focusText: 
-26501312 | status: There are no notes. | focus: 67402 | focusText: 
-26501375 | status: There are no notes. | focus: 67402 | focusText: 
-26501437 | status: There are no notes. | focus: 67402 | focusText: 
-26501500 | status: There are no notes. | focus: 67402 | focusText: 
-26501562 | status: There are no notes. | focus: 67402 | focusText: 
-26501625 | status: There are no notes. | focus: 67402 | focusText: 
-26501687 | status: There are no notes. | focus: 67402 | focusText: 
-26501765 | status: There are no notes. | focus: 67402 | focusText: 
-26501828 | status: There are no notes. | focus: 67402 | focusText: 
-26501875 | status: There are no notes. | focus: 67402 | focusText: 21
-26501937 | status: There are no notes. | focus: 67402 | focusText: 21
-26502000 | status: There are no notes. | focus: 67402 | focusText: 21
-26502062 | status: There are no notes. | focus: 67402 | focusText: 21
-26502125 | status: There are no notes. | focus: 67402 | focusText: 21
-26502187 | status: There are no notes. | focus: 67402 | focusText: 21
-26502250 | status: There are no notes. | focus: 67402 | focusText: 21
-26502312 | status: There are no notes. | focus: 67402 | focusText: 21
-26502375 | status: There are no notes. | focus: 67402 | focusText: 21
-26502437 | status: There are no notes. | focus: 67402 | focusText: 21
-26502500 | status: There are no notes. | focus: 67402 | focusText: 21
-26502562 | status: There are no notes. | focus: 67402 | focusText: 21
-26502625 | status: There are no notes. | focus: 67402 | focusText: 21
-26502687 | status: There are no notes. | focus: 67402 | focusText: 214
-26502750 | status: There are no notes. | focus: 67402 | focusText: 214
-26502812 | status: There are no notes. | focus: 67402 | focusText: 214
-26502875 | status: There are no notes. | focus: 67402 | focusText: 214
-26502937 | status: There are no notes. | focus: 67402 | focusText: 2143
-26503000 | status: There are no notes. | focus: 67402 | focusText: 2143
-26503062 | status: There are no notes. | focus: 67402 | focusText: 2143
-26503125 | status: There are no notes. | focus: 67402 | focusText: 2143
-26503187 | status: There are no notes. | focus: 67402 | focusText: 21439
-26503250 | status: There are no notes. | focus: 67402 | focusText: 21439
-26503312 | status: There are no notes. | focus: 67402 | focusText: 21439
-26503375 | status: There are no notes. | focus: 67402 | focusText: 21439
-26503437 | status: There are no notes. | focus: 67402 | focusText: 21439
-26503500 | status: There are no notes. | focus: 67402 | focusText: 21439
-26503562 | status: There are no notes. | focus: 67402 | focusText: 21439
-26504859 | status: Ready | focus: 67402 | focusText: 21439
-26504890 | status: Ready | focus: 67402 | focusText: 21439
-26504953 | status: Ready | focus: 67402 | focusText: 21439
-26505015 | status: Ready | focus: 67402 | focusText: 21439
-26505078 | status: Ready | focus: 67402 | focusText: 21439
-26505140 | status: Ready | focus: 67402 | focusText: 21439
-26505203 | status: Ready | focus: 67402 | focusText: 21439
-26505265 | status: Ready | focus: 67402 | focusText: 21439
-26505328 | status: Ready | focus: 67402 | focusText: 21439
-26505390 | status: Ready | focus: 67402 | focusText: 21439
-26505453 | status: Ready | focus: 67402 | focusText: 21439
-26505515 | status: Ready | focus: 67402 | focusText: 21439
-26505578 | status: Ready | focus: 67402 | focusText: 21439
-26505640 | status: Ready | focus: 67402 | focusText: 21439
-26505703 | status: Ready | focus: 67402 | focusText: 21439
-26505781 | status: Ready | focus: 67402 | focusText: 21439
-26505843 | status: Ready | focus: 67402 | focusText: 21439
-26505906 | status: Ready | focus: 67402 | focusText: 21439
-26505968 | status: Ready | focus: 67402 | focusText: 21439
-26506031 | status: Ready | focus: 67402 | focusText: 21439
-26506093 | status: Ready | focus: 67402 | focusText: 21439
-26506156 | status: Ready | focus: 67402 | focusText: 21439
-26506218 | status: Ready | focus: 67402 | focusText: 21439
-26506281 | status: Ready | focus: 67402 | focusText: 21439
-26506343 | status: Ready | focus: 67402 | focusText: 21439
-26506406 | status: Ready | focus: 67402 | focusText: 21439
-26506468 | status: Ready | focus: 67402 | focusText: 21439
-26506531 | status: Ready | focus: 67402 | focusText: 21439
-26506593 | status: Ready | focus: 67402 | focusText: 21439
-26506656 | status: Ready | focus: 67402 | focusText: 21439
-26506718 | status: Ready | focus: 67402 | focusText: 21439
-26506781 | status: Ready | focus: 67402 | focusText: 21439
-26506843 | status: Ready | focus: 67402 | focusText: 21439
-26506906 | status: Ready | focus: 67402 | focusText: 21439
-26506968 | status: Ready | focus: 67402 | focusText: 21439
-26507031 | status: Ready | focus: 67402 | focusText: 21439
+26730250 | status: Ready | focus: 132706 | focusText: AP
+26730312 | status: Ready | focus: 132706 | focusText: AP
+26730375 | status: Ready | focus: 132706 | focusText: AP
+26730437 | status: Ready | focus: 132706 | focusText: AP
+26730500 | status: Ready | focus: 132706 | focusText: AP
+26730562 | status: Ready | focus: 132706 | focusText: AP
+26730625 | status: Ready | focus: 132706 | focusText: AP
+26730687 | status: Ready | focus: 132706 | focusText: AP
+26730750 | status: Ready | focus: 132706 | focusText: AP
+26730812 | status: Ready | focus: 132706 | focusText: AP
+26730875 | status: Ready | focus: 132706 | focusText: AP
+26730937 | status: Ready | focus: 132706 | focusText: AP
+26731000 | status: Ready | focus: 132706 | focusText: AP
+26731062 | status: Ready | focus: 132706 | focusText: AP
+26731125 | status: Ready | focus: 132706 | focusText: AP
+26731187 | status: Ready | focus: 132706 | focusText: AP
+26731250 | status: Ready | focus: 132706 | focusText: AP
+26731312 | status: Ready | focus: 132706 | focusText: AP
+26731390 | status: Ready | focus: 132706 | focusText: AP
+26731453 | status: Ready | focus: 132706 | focusText: AP
+26731515 | status: Ready | focus: 132706 | focusText: AP
+26731578 | status: Ready | focus: 132706 | focusText: AP
+26731640 | status: Ready | focus: 132706 | focusText: AP
+26731703 | status: Ready | focus: 132706 | focusText: AP
+26731765 | status: Ready | focus: 132706 | focusText: AP
+26731828 | status: Ready | focus: 132706 | focusText: AP
+26731890 | status: Ready | focus: 67402 | focusText: 
+26731953 | status: Ready | focus: 67402 | focusText: 
+26732015 | status: Ready | focus: 67402 | focusText: 
+26732078 | status: Ready | focus: 67402 | focusText: 
+26732140 | status: Ready | focus: 67402 | focusText: 
+26732203 | status: Ready | focus: 67402 | focusText: 
+26732265 | status: Ready | focus: 67402 | focusText: 
+26732343 | status: Ready | focus: 67402 | focusText: 
+26732390 | status: Ready | focus: 67402 | focusText: 
+26732453 | status: Ready | focus: 67402 | focusText: 
+26732515 | status: Ready | focus: 67402 | focusText: 
+26732578 | status: Ready | focus: 67402 | focusText: 
+26732640 | status: Ready | focus: 67402 | focusText: 
+26732703 | status: Ready | focus: 67402 | focusText: 
+26732765 | status: Ready | focus: 67402 | focusText: 
+26732828 | status: Ready | focus: 67402 | focusText: 
+26732890 | status: Ready | focus: 67402 | focusText: 
+26732953 | status: Ready | focus: 67402 | focusText: 
+26733015 | status: Ready | focus: 67402 | focusText: 
+26733078 | status: Ready | focus: 67402 | focusText: 
+26733140 | status: Ready | focus: 67402 | focusText: 
+26733203 | status: Ready | focus: 67402 | focusText: 
+26733265 | status: Ready | focus: 67402 | focusText: 
+26733328 | status: Ready | focus: 67402 | focusText: 
+26733390 | status: Ready | focus: 67402 | focusText: 
+26733453 | status: Ready | focus: 67402 | focusText: 
+26733515 | status: Ready | focus: 67402 | focusText: 
+26733578 | status: Ready | focus: 67402 | focusText: 
+26733640 | status: Ready | focus: 67402 | focusText: 
+26733703 | status: Ready | focus: 67402 | focusText: 
+26733765 | status: Ready | focus: 67402 | focusText: 
+26733828 | status: Ready | focus: 67402 | focusText: 
+26733890 | status: Ready | focus: 67402 | focusText: 
+26733953 | status: Ready | focus: 67402 | focusText: 
+26734015 | status: Ready | focus: 67402 | focusText: 
+26734125 | status: Ready | focus: 67402 | focusText: 
+26734265 | status: Ready | focus: 67402 | focusText: 
+26734328 | status: Ready | focus: 67402 | focusText: 
+26734406 | status: Ready | focus: 67402 | focusText: 
+26734468 | status: Ready | focus: 67402 | focusText: 
+26734562 | status: Ready | focus: 67402 | focusText: 
+26734625 | status: Ready | focus: 67402 | focusText: 
+26734687 | status: Ready | focus: 67402 | focusText: 
+26734750 | status: Ready | focus: 67402 | focusText: 
+26734828 | status: Ready | focus: 67402 | focusText: 
+26734875 | status: Ready | focus: 67402 | focusText: 
+26734937 | status: Ready | focus: 67402 | focusText: 
+26735000 | status: Ready | focus: 67402 | focusText: 
+26735062 | status: Ready | focus: 67402 | focusText: 
+26735125 | status: Ready | focus: 67402 | focusText: 
+26735187 | status: Ready | focus: 67402 | focusText: 
+26735250 | status: Ready | focus: 67402 | focusText: 
+26735312 | status: Ready | focus: 67402 | focusText: 
+26735375 | status: Ready | focus: 67402 | focusText: 
+26735437 | status: Ready | focus: 67402 | focusText: 
+26735500 | status: Ready | focus: 67402 | focusText: 
+26735562 | status: Ready | focus: 67402 | focusText: 
+26735625 | status: Ready | focus: 67402 | focusText: 
+26735687 | status: Ready | focus: 67402 | focusText: 
+26735750 | status: Ready | focus: 67402 | focusText: 
+26735812 | status: Ready | focus: 67402 | focusText: 
+26735875 | status: Ready | focus: 67402 | focusText: 
+26735937 | status: Ready | focus: 67402 | focusText: 
+26736000 | status: Ready | focus: 67402 | focusText: 
+26736062 | status: Ready | focus: 67402 | focusText: 
+26736125 | status: Ready | focus: 67402 | focusText: 
+26736187 | status: Ready | focus: 67402 | focusText: 
+26736250 | status: Ready | focus: 67402 | focusText: 
+26736312 | status: Ready | focus: 67402 | focusText: 
+26736375 | status: Ready | focus: 67402 | focusText: 
+26736437 | status: Ready | focus: 67402 | focusText: 
+26737296 | status: Ready | focus: 67402 | focusText: 
+26737656 | status: Ready | focus: 67402 | focusText: 
+26737718 | status: Ready | focus: 67402 | focusText: 
+26737781 | status: Ready | focus: 67402 | focusText: 
+26737843 | status: Ready | focus: 67402 | focusText: 
+26737906 | status: Ready | focus: 67402 | focusText: 
+26737968 | status: Ready | focus: 67402 | focusText: 
+26738031 | status: Ready | focus: 67402 | focusText: 
+26738109 | status: Ready | focus: 67402 | focusText: 
