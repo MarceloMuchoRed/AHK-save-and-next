@@ -39,9 +39,9 @@ F13:: {
         Send "{Enter}"
         WaitForOrderLoad(order.po)
         DismissNoteWarning()
-        WaitForReady()
         WinActivate FAM_WIN
         WinWaitActive FAM_WIN, , 3
+        WaitForReady()
         Sleep 300
         Click 380, 255
         Sleep 200
@@ -53,7 +53,6 @@ F13:: {
             rowY := firstRowY + (A_Index - 1) * rowHeight
             Click productX, rowY
             WaitForChange()
-            WaitForReady()
             Send "{Tab}"
             Sleep 300
             Send "{Tab}"
