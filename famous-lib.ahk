@@ -83,6 +83,20 @@ DismissGLWarning() {
     }
 }
 
+; ── UI helpers ───────────────────────────────────────────────────────────────
+; Click the PO field
+ClickPoField(x, y) {
+    Click x, y
+}
+
+; Sweep mouse across the toolbar area to clear status bar without clicking anything
+ClearStatusBar() {
+    loop 5 {
+        MouseMove 100 + (A_Index * 40), 50, 5
+        Sleep 50
+    }
+}
+
 ; ── FAMOUS keyboard shortcuts ─────────────────────────────────────────────────
 FamSave()   => Send("^s")
 FamFirst()  => Send("{F5}")

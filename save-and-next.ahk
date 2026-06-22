@@ -36,7 +36,7 @@ F13:: {
         order := orders[A_Index]
 
         WinActivate FAM_WIN
-        Click poFieldX, poFieldY
+        ClickPoField(poFieldX, poFieldY)
         Send order.po
         Send "{Enter}"
         WaitForOrderLoad(order.po)
@@ -52,7 +52,7 @@ F13:: {
             Sleep 150
         }
 
-        Click poFieldX, poFieldY
+        ClearStatusBar()
         FamSave()
         WaitForReady()
         DismissGLWarning()
