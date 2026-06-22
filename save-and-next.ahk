@@ -82,7 +82,8 @@ F15:: {
     SetTimer () => ToolTip(), -2000
 
     if debugLogging {
-        FileDelete debugFile
+        if FileExist(debugFile)
+            FileDelete debugFile
         SetTimer LogStatus, 50
     } else {
         SetTimer LogStatus, 0
