@@ -51,6 +51,20 @@ WaitForReady() {
     }
 }
 
+; Waits until FAMOUS is ready OR a warning dialog appears, whichever comes first
+WaitForReadyOrWarning() {
+    loop {
+        WaitIfCrashed()
+        if WinExist(FAM_WARN)
+            break
+        try {
+            if (ControlGetText("FNHELP1", FAM_WIN) = "Ready")
+                break
+        }
+        Sleep 50
+    }
+}
+
 WaitForChange(timeoutMs := 0) {
     deadline := A_TickCount + timeoutMs
     loop {

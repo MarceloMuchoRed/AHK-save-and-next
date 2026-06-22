@@ -63,7 +63,7 @@ F13:: {
 
         ClearStatusBar()
         FamSave()
-        Sleep 500
+        WaitForReadyOrWarning()
         DismissGLWarning()
         WaitForReady()
 
