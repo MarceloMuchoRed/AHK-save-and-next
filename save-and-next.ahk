@@ -5,6 +5,7 @@
 #Include famous-lib.ahk
 
 CoordMode "Mouse", "Client"
+CoordMode "Pixel", "Client"
 
 csvFile  := A_ScriptDir "\orders.csv"
 
@@ -68,4 +69,31 @@ F13:: {
 F14:: {
     ToolTip
     MsgBox "Stopped."
+}
+
+; ── Debug: F15 toggles logging status bar control text + pixel color to file ──
+debugLogging := false
+debugFile    := A_ScriptDir "\debug-status.txt"
+
+F15:: {
+    global debugLogging
+    debugLogging := !debugLogging
+    ToolTip debugLogging ? "Debug logging ON" : "Debug logging OFF"
+    SetTimer () => ToolTip(), -2000
+
+    if debugLogging {
+        FileDelete debugFile
+        SetTimer LogStatus, 50
+    } else {
+        SetTimer LogStatus, 0
+    }
+}
+
+LogStatus() {
+    global debugFile
+    try {
+        text  := ControlGetText("FNHELP1", FAM_WIN)
+        color := PixelGetColor(STATUS_X, STATUS_Y)
+        FileAppend A_TickCount " | text: " text " | color: " color "`n", debugFile
+    }
 }

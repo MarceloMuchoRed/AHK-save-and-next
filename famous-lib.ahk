@@ -4,6 +4,11 @@
 FAM_WIN  := "FAMOUS"
 FAM_WARN := "Warning"
 
+; ── Status bar pixel (client coords, hover over "Ready" text to get these) ───
+STATUS_X     := 27
+STATUS_Y     := 1006
+STATUS_READY := "0xC5E6E6"
+
 ; ── Crash / ready helpers ────────────────────────────────────────────────────
 WaitIfCrashed() {
     if WinExist(FAM_WIN " (Not Responding)") {
@@ -32,10 +37,8 @@ WaitForReady() {
 WaitForChange() {
     loop {
         WaitIfCrashed()
-        try {
-            if (ControlGetText("FNHELP1", FAM_WIN) != "Ready")
-                break
-        }
+        if (PixelGetColor(STATUS_X, STATUS_Y) != STATUS_READY)
+            break
         Sleep 10
     }
 }
