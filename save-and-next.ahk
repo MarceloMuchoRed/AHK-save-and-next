@@ -40,10 +40,11 @@ F13:: {
         WaitForOrderLoad(order.po)
         DismissNoteWarning()
         WaitForReady()
-
-        Sleep 200
+        WinActivate FAM_WIN
+        WinWaitActive FAM_WIN, , 3
+        Sleep 300
         Click 380, 255
-        Sleep 100
+        Sleep 200
         Send "NONBOB"
         Send "{Tab}"
         Sleep 100
