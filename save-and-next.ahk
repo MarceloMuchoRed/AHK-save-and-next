@@ -34,6 +34,7 @@ F13:: {
         order := orders[A_Index]
 
         WinActivate FAM_WIN
+        WinWaitActive FAM_WIN, , 3
         ClickPoField()
         Sleep 150
         Send "^a"

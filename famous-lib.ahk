@@ -85,6 +85,7 @@ DismissGLWarning() {
         Send "!y"
         Sleep 250
         WinActivate FAM_WIN
+        WinWaitActive FAM_WIN, , 3
     }
 }
 
