@@ -48,13 +48,14 @@ WaitForReady() {
             if (ControlGetText("FNHELP1", FAM_WIN) = "Ready")
                 break
         }
-        if (A_TickCount - lastCheck > 10000) {
+        if (A_TickCount - lastCheck > 2000) {
             if WinExist(FAM_WARN) {
                 WinActivate FAM_WARN
                 WinWaitActive FAM_WARN, , 2
                 Send "{Enter}"
                 Sleep 250
                 WinActivate FAM_WIN
+                WinWaitActive FAM_WIN, , 3
             }
             lastCheck := A_TickCount
         }
