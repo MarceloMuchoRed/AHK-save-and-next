@@ -35,6 +35,8 @@ F13:: {
 
         WinActivate FAM_WIN
         ClickPoField()
+        Sleep 150
+        Send "^a"
         Send order.po
         Send "{Enter}"
         WaitForOrderLoad(order.po)
