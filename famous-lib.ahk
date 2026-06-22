@@ -37,8 +37,10 @@ WaitForReady() {
 WaitForChange() {
     loop {
         WaitIfCrashed()
-        if (PixelGetColor(STATUS_X, STATUS_Y) != STATUS_READY)
-            break
+        try {
+            if (ControlGetText("FNHELP1", FAM_WIN) != "Ready")
+                break
+        }
         Sleep 10
     }
 }

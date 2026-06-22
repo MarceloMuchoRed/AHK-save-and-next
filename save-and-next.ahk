@@ -14,6 +14,7 @@ poFieldY    := 165
 productX    := 330
 firstRowY   := 342
 rowHeight   := 20
+orderLoadMs := 1500  ; tune this up if orders aren't fully loaded before products are clicked
 
 F13:: {
     if !WinCheck(FAM_WIN)
@@ -41,8 +42,7 @@ F13:: {
         Send "^a"
         Send order.po
         Send "{Enter}"
-        WaitForChange()
-        WaitForReady()
+        Sleep orderLoadMs
         DismissNoteWarning()
 
         loop order.count {
