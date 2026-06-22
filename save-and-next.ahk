@@ -40,7 +40,6 @@ F13:: {
         Send order.po
         Send "{Enter}"
         WaitForOrderLoad(order.po)
-        DismissNoteWarning()
 
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
