@@ -39,6 +39,7 @@ F13:: {
         Send "{Enter}"
         WaitForOrderLoad(order.po)
         DismissNoteWarning()
+        WaitForReady()
 
         Sleep 200
         Click 380, 255
