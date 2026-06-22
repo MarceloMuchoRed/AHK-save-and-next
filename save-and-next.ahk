@@ -11,7 +11,7 @@ csvFile  := A_ScriptDir "\orders.csv"
 
 productX    := 330
 firstRowY   := 342
-rowHeight   := 20
+rowHeight   := 18
 
 F13:: {
     if !WinCheck(FAM_WIN)
@@ -46,11 +46,11 @@ F13:: {
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
             Click productX, rowY
-            WaitForChange(1000)
+            WaitForChange()
             Send "{Tab}"
-            Sleep 500
+            Sleep 300
             Send "{Tab}"
-            Sleep 500
+            Sleep 300
         }
 
         Sleep 200
