@@ -35,6 +35,7 @@ F13:: {
 
         WinActivate FAM_WIN
         WinWaitActive FAM_WIN, , 3
+        WinMaximize FAM_WIN
         ClickPoField()
         Sleep 150
         Send "^a"
