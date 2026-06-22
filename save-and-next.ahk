@@ -53,6 +53,8 @@ F13:: {
         }
 
         MouseMove poFieldX, poFieldY
+        MouseMove poFieldX + 5, poFieldY
+        MouseMove poFieldX, poFieldY
         FamSave()
         WaitForReady()
         DismissGLWarning()
