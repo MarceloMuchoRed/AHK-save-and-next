@@ -1,9 +1,11 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
+#Include ahk-utils.ahk
+#Include famous-lib.ahk
+
 CoordMode "Mouse", "Client"
 
-winTitle := "FAMOUS"
 csvFile  := A_ScriptDir "\orders.csv"
 
 poFieldX    := 370
@@ -12,58 +14,13 @@ productX    := 330
 firstRowY   := 342
 rowHeight   := 20
 
-WaitIfCrashed() {
-    global winTitle
-    if WinExist(winTitle " (Not Responding)") {
-        ToolTip "FAMOUS not responding — paused, waiting to recover..."
-        loop {
-            Sleep 2000
-            if !WinExist(winTitle " (Not Responding)")
-                break
-        }
-        ToolTip
-        Sleep 500
-    }
-}
-
-WaitForReady() {
-    global winTitle
-    loop {
-        WaitIfCrashed()
-        try {
-            if (ControlGetText("FNHELP1", winTitle) = "Ready")
-                break
-        }
-        Sleep 50
-    }
-}
-
-WaitForChange() {
-    global winTitle
-    loop {
-        WaitIfCrashed()
-        try {
-            if (ControlGetText("FNHELP1", winTitle) != "Ready")
-                break
-        }
-        Sleep 50
-    }
-}
-
 F13:: {
-    if !WinExist(winTitle) {
-        MsgBox "Window not found! Is FAMOUS open?"
+    if !WinCheck(FAM_WIN)
         return
-    }
-
-    if !FileExist(csvFile) {
-        MsgBox "orders.csv not found in script folder!"
+    if !FileCheck(csvFile)
         return
-    }
 
-    WinActivate winTitle
-    WinMaximize winTitle
-    WinWaitActive winTitle, , 3
+    WinFocus(FAM_WIN)
 
     orders := []
     loop read csvFile {
@@ -77,13 +34,14 @@ F13:: {
     loop orders.Length {
         order := orders[A_Index]
 
-        WinActivate winTitle
+        WinActivate FAM_WIN
         Click poFieldX, poFieldY
         Sleep 200
         Send order.po
         Send "{Tab}"
         WaitForChange()
         WaitForReady()
+        DismissNoteWarning()
 
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
@@ -97,6 +55,7 @@ F13:: {
 
         Send "^s"
         WaitForReady()
+        DismissGLWarning()
 
         ToolTip "Order " A_Index " of " total " done (PO " order.po ")"
         SetTimer () => ToolTip(), -2000
