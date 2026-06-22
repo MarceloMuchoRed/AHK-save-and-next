@@ -54,7 +54,6 @@ F13:: {
         Click 380, 255
         Sleep 200
         Send "NONBOB"
-        Send "{Tab}"
         Sleep 100
 
         ClearStatusBar()
