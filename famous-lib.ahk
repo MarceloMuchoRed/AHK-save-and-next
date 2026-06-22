@@ -77,12 +77,12 @@ DismissNoteWarning() {
     }
 }
 
-; Dismisses the GL date warning that appears when navigating old orders (Alt+Y)
+; Dismisses the GL date warning that appears when saving old orders (Enter)
 DismissGLWarning() {
     if WinExist(FAM_WARN) {
         WinActivate FAM_WARN
         WinWaitActive FAM_WARN, , 2
-        Send "!y"
+        Send "{Enter}"
         Sleep 250
         WinActivate FAM_WIN
         WinWaitActive FAM_WIN, , 3

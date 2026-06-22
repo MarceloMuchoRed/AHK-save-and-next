@@ -33,8 +33,6 @@ F13:: {
     loop orders.Length {
         order := orders[A_Index]
 
-        DismissNoteWarning()
-        DismissGLWarning()
         WinActivate FAM_WIN
         WinWaitActive FAM_WIN, , 10
         WinMaximize FAM_WIN
@@ -65,7 +63,7 @@ F13:: {
 
         ClearStatusBar()
         FamSave()
-        WaitForReady()
+        Sleep 500
         DismissGLWarning()
         WaitForReady()
 
