@@ -36,7 +36,7 @@ WaitForChange() {
             if (ControlGetText("FNHELP1", FAM_WIN) != "Ready")
                 break
         }
-        Sleep 50
+        Sleep 10
     }
 }
 

@@ -13,7 +13,6 @@ poFieldY    := 165
 productX    := 330
 firstRowY   := 342
 rowHeight   := 20
-orderLoadMs := 1500  ; how long to wait for an order to load after pressing Tab
 
 F13:: {
     if !WinCheck(FAM_WIN)
@@ -40,7 +39,8 @@ F13:: {
         Sleep 200
         Send order.po
         Send "{Tab}"
-        Sleep orderLoadMs
+        WaitForChange()
+        WaitForReady()
         DismissNoteWarning()
 
         loop order.count {
