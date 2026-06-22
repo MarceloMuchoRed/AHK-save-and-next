@@ -52,6 +52,7 @@ F13:: {
             Sleep 150
         }
 
+        MouseMove poFieldX, poFieldY
         FamSave()
         WaitForReady()
         DismissGLWarning()
