@@ -37,8 +37,9 @@ F13:: {
         WinActivate FAM_WIN
         Click poFieldX, poFieldY
         Sleep 200
+        Send "^a"
         Send order.po
-        Send "{Tab}"
+        Send "{Enter}"
         WaitForChange()
         WaitForReady()
         DismissNoteWarning()
