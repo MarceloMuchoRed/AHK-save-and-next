@@ -39,15 +39,6 @@ F13:: {
         Send "{Enter}"
         WaitForOrderLoad(order.po)
         DismissNoteWarning()
-        WinActivate FAM_WIN
-        WinWaitActive FAM_WIN, , 3
-        WaitForReady()
-        Sleep 300
-        Click 380, 255
-        Sleep 200
-        Send "NONBOB"
-        Send "{Tab}"
-        Sleep 100
 
         loop order.count {
             rowY := firstRowY + (A_Index - 1) * rowHeight
@@ -58,6 +49,13 @@ F13:: {
             Send "{Tab}"
             Sleep 300
         }
+
+        Sleep 200
+        Click 380, 255
+        Sleep 200
+        Send "NONBOB"
+        Send "{Tab}"
+        Sleep 100
 
         ClearStatusBar()
         FamSave()
