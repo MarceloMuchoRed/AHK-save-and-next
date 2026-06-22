@@ -53,7 +53,7 @@ F13:: {
             Sleep 150
         }
 
-        Send "^s"
+        FamSave()
         WaitForReady()
         DismissGLWarning()
 
