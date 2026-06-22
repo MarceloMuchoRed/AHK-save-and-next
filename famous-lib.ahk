@@ -41,11 +41,22 @@ WaitForOrderLoad(po) {
 }
 
 WaitForReady() {
+    lastCheck := A_TickCount
     loop {
         WaitIfCrashed()
         try {
             if (ControlGetText("FNHELP1", FAM_WIN) = "Ready")
                 break
+        }
+        if (A_TickCount - lastCheck > 10000) {
+            if WinExist(FAM_WARN) {
+                WinActivate FAM_WARN
+                WinWaitActive FAM_WARN, , 2
+                Send "{Enter}"
+                Sleep 250
+                WinActivate FAM_WIN
+            }
+            lastCheck := A_TickCount
         }
         Sleep 50
     }
