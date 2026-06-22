@@ -93,8 +93,9 @@ F15:: {
 LogStatus() {
     global debugFile
     try {
-        text  := ControlGetText("FNHELP1", FAM_WIN)
-        color := PixelGetColor(STATUS_X, STATUS_Y)
-        FileAppend A_TickCount " | text: " text " | color: " color "`n", debugFile
+        text    := ControlGetText("FNHELP1", FAM_WIN)
+        color   := PixelGetColor(STATUS_X, STATUS_Y)
+        focused := ControlGetFocus(FAM_WIN)
+        FileAppend A_TickCount " | text: " text " | color: " color " | focus: " focused "`n", debugFile
     }
 }
