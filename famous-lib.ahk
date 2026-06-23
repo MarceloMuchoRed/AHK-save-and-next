@@ -27,15 +27,19 @@ WaitIfCrashed() {
     }
 }
 
-WaitForOrderLoad(po) {
+; Returns true when order is loaded, false if 30s timeout is hit
+WaitForOrderLoad(po, timeoutMs := 30000) {
+    deadline := A_TickCount + timeoutMs
     loop {
         WaitIfCrashed()
         DismissNoteWarning()
         try {
             focused := ControlGetFocus(FAM_WIN)
             if (ControlGetText("FNHELP1", FAM_WIN) = "Ready" && ControlGetText(focused, FAM_WIN) = po)
-                break
+                return true
         }
+        if (A_TickCount >= deadline)
+            return false
         Sleep 10
     }
 }
@@ -63,16 +67,17 @@ WaitForReady() {
     }
 }
 
-WaitForChange(timeoutMs := 0) {
+; Returns true if status changed from Ready, false if timeout
+WaitForChange(timeoutMs := 3000) {
     deadline := A_TickCount + timeoutMs
     loop {
         WaitIfCrashed()
         try {
             if (ControlGetText("FNHELP1", FAM_WIN) != "Ready")
-                break
+                return true
         }
-        if (timeoutMs > 0 && A_TickCount >= deadline)
-            break
+        if (A_TickCount >= deadline)
+            return false
         Sleep 10
     }
 }
@@ -102,7 +107,6 @@ DismissGLWarning() {
 }
 
 ; ── UI helpers ───────────────────────────────────────────────────────────────
-; Click the PO field
 ClickPoField() {
     Click PO_FIELD_X, PO_FIELD_Y
 }
