@@ -17,6 +17,9 @@ FIRST_SKU_Y := 244   ; TODO: fill in
 ; ── How many rows to add before saving ───────────────────────────────────────
 saveEvery := 25
 
+; ── Resume: set to the row number to start from (1 = beginning) ──────────────
+startRow  := 1
+
 g_paused := false
 
 F13:: {
@@ -44,15 +47,29 @@ F13:: {
         return
     }
 
-    total := products.Length
-    FileAppend "=== Products batch started " FormatTime(, "yyyy-MM-dd HH:mm:ss") " | " total " products ===`n", logFile
+    if (startRow > 1) {
+        trimmed := []
+        loop products.Length {
+            if (A_Index >= startRow)
+                trimmed.Push(products[A_Index])
+        }
+        products := trimmed
+    }
+
+    if (products.Length = 0) {
+        MsgBox "startRow (" startRow ") is beyond the end of the file."
+        return
+    }
+
+    total    := products.Length
+    FileAppend "=== Products batch started " FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " startRow " | " total " remaining ===`n", logFile
 
     Click FIRST_SKU_X, FIRST_SKU_Y
     Sleep 300
 
     loop products.Length {
         product    := products[A_Index]
-        productIdx := A_Index
+        productIdx := A_Index + startRow - 1
 
         while g_paused {
             ToolTip "Paused — press F15 to resume"
@@ -73,8 +90,8 @@ F13:: {
         Send "{Tab}"
         Sleep 150
 
-        FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | SKU " Trim(product[1]) " | OK`n", logFile
-        ToolTip "Product " productIdx " of " total " (SKU " Trim(product[1]) ")"
+        FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | OK`n", logFile
+        ToolTip "Row " productIdx " of " (total + startRow - 1) " (SKU " Trim(product[1]) ")"
         SetTimer () => ToolTip(), -1500
 
         ; Save every saveEvery rows, then reanchor to first visible empty row
