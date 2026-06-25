@@ -11,12 +11,12 @@ csvFile  := A_ScriptDir "\products.csv"
 logFile  := A_ScriptDir "\products.log"
 
 ; ── Coords of the first SKU cell in the product list (client coords) ─────────
-FIRST_SKU_X := 0   ; TODO: fill in
-FIRST_SKU_Y := 0   ; TODO: fill in
+FIRST_SKU_X := 345   ; TODO: fill in
+FIRST_SKU_Y := 244   ; TODO: fill in
 
 ; ── How many rows to add before saving ───────────────────────────────────────
 saveEvery  := 15
-saveSleep  := 3000  ; ms to wait after save for filter to reapply
+saveSleep  := 6000  ; ms to wait after save for filter to reapply
 
 g_paused := false
 
