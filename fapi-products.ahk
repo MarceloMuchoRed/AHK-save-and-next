@@ -81,7 +81,7 @@ F13:: {
         ; After the 11th Tab, FAMOUS moves to the next empty row.
         loop 10 {
             SendText Trim(product[A_Index])
-            Sleep 100
+            Sleep 50
             Send "{Tab}"
             Sleep 150
         }
