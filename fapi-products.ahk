@@ -80,12 +80,16 @@ F13:: {
         ; Type each of the 10 CSV columns, then today's date as the 11th.
         ; After the 11th Tab, FAMOUS moves to the next empty row.
         loop 10 {
-            SendText Trim(product[A_Index])
+            A_Clipboard := Trim(product[A_Index])
+            ClipWait 1
+            Send "^v"
             Sleep 100
             Send "{Tab}"
             Sleep 150
         }
-        SendText FormatTime(, "MM/dd/yyyy")
+        A_Clipboard := FormatTime(, "MM/dd/yyyy")
+        ClipWait 1
+        Send "^v"
         Sleep 100
         Send "{Tab}"
         Sleep 150
