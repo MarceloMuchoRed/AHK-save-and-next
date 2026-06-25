@@ -123,9 +123,12 @@ ClearStatusBar() {
 WaitForCursorNormal() {
     hWait     := DllCall("LoadCursor", "Ptr", 0, "Ptr", 32514, "Ptr")
     hAppStart := DllCall("LoadCursor", "Ptr", 0, "Ptr", 32650, "Ptr")
+    ci        := Buffer(16 + A_PtrSize)  ; CURSORINFO struct
+    NumPut "UInt", ci.Size, ci, 0        ; cbSize
     loop {
-        if (DllCall("GetCursor", "Ptr") != hWait
-         && DllCall("GetCursor", "Ptr") != hAppStart)
+        DllCall("GetCursorInfo", "Ptr", ci)
+        hCursor := NumGet(ci, 8, "Ptr")  ; hCursor field
+        if (hCursor != hWait && hCursor != hAppStart)
             break
         Sleep 100
     }
