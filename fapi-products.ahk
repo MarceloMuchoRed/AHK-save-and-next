@@ -101,6 +101,8 @@ F13:: {
             Sleep 10000
             Send "!o"
             Sleep 1000
+            FamSave()
+            Sleep 5000
             Click FIRST_SKU_X, FIRST_SKU_Y
             Sleep 300
         }
@@ -109,6 +111,10 @@ F13:: {
     ToolTip "Saving final batch..."
     FamSave()
     Sleep 10000
+    Send "!o"
+    Sleep 1000
+    FamSave()
+    Sleep 5000
 
     FileAppend "=== Batch done " FormatTime(, "yyyy-MM-dd HH:mm:ss") " ===`n`n", logFile
     MsgBox "Done — " total " products added."
