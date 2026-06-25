@@ -99,6 +99,8 @@ F13:: {
             ToolTip "Saving after " productIdx " of " total " products..."
             FamSave()
             Sleep 10000
+            Send "!o"
+            Sleep 1000
             Click FIRST_SKU_X, FIRST_SKU_Y
             Sleep 300
         }
