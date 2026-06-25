@@ -64,10 +64,12 @@ F13:: {
         ; Type each of the 10 columns and Tab to the next.
         ; After the 10th Tab, FAMOUS moves to the next empty row.
         loop 10 {
+            if (A_Index = 1)
+                Sleep 500  ; wait for FAMOUS to settle on new row before SKU
             Send Trim(product[A_Index])
             Sleep 100
             Send "{Tab}"
-            Sleep (A_Index = 10 ? 300 : 150)
+            Sleep 150
         }
 
         FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | SKU " Trim(product[1]) " | OK`n", logFile
