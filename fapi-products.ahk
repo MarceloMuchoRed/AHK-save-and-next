@@ -15,7 +15,7 @@ FIRST_SKU_X := 345   ; TODO: fill in
 FIRST_SKU_Y := 244   ; TODO: fill in
 
 ; ── How many rows to add before saving ───────────────────────────────────────
-saveEvery := 40
+saveEvery := 25
 
 g_paused := false
 
@@ -81,7 +81,7 @@ F13:: {
         if (Mod(productIdx, saveEvery) = 0 && productIdx < total) {
             ToolTip "Saving after " productIdx " of " total " products..."
             FamSave()
-            WaitForCursorNormal()
+            Sleep 10000
             Click FIRST_SKU_X, FIRST_SKU_Y
             Sleep 300
         }
@@ -89,7 +89,7 @@ F13:: {
 
     ToolTip "Saving final batch..."
     FamSave()
-    WaitForCursorNormal()
+    Sleep 10000
 
     FileAppend "=== Batch done " FormatTime(, "yyyy-MM-dd HH:mm:ss") " ===`n`n", logFile
     MsgBox "Done — " total " products added."
