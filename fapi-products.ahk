@@ -99,10 +99,13 @@ F13:: {
             ToolTip "Saving after " productIdx " of " total " products..."
             FamSave()
             Sleep 10000
-            Send "!o"
-            Sleep 1000
-            FamSave()
-            Sleep 5000
+            if WinExist("Application Message") {
+                ToolTip
+                MsgBox "Application Message detected after row " productIdx ". Handle it manually, then click OK to resume from the next product, or F14 to exit."
+                WinActivate FAM_WIN
+                WinWaitActive FAM_WIN, , 5
+                WinMaximize FAM_WIN
+            }
             Click FIRST_SKU_X, FIRST_SKU_Y
             Sleep 300
         }
@@ -111,10 +114,10 @@ F13:: {
     ToolTip "Saving final batch..."
     FamSave()
     Sleep 10000
-    Send "!o"
-    Sleep 1000
-    FamSave()
-    Sleep 5000
+    if WinExist("Application Message") {
+        ToolTip
+        MsgBox "Application Message detected on final save. Handle it manually, then click OK."
+    }
 
     FileAppend "=== Batch done " FormatTime(, "yyyy-MM-dd HH:mm:ss") " ===`n`n", logFile
     MsgBox "Done — " total " products added."
