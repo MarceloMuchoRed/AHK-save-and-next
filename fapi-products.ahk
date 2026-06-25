@@ -67,7 +67,7 @@ F13:: {
             Send Trim(product[A_Index])
             Sleep 100
             Send "{Tab}"
-            Sleep 150
+            Sleep (A_Index = 10 ? 300 : 150)
         }
 
         FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | SKU " Trim(product[1]) " | OK`n", logFile
