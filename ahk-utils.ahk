@@ -22,3 +22,11 @@ WinFocus(title, timeout := 3) {
     WinMaximize title
     WinWaitActive title, , timeout
 }
+
+; Send text one character at a time with a small delay so dropdowns can keep up
+TypeSlow(text, delay := 15) {
+    loop StrLen(text) {
+        SendText SubStr(text, A_Index, 1)
+        Sleep delay
+    }
+}
