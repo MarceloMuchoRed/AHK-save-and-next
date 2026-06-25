@@ -119,6 +119,18 @@ ClearStatusBar() {
     }
 }
 
+; Waits until the cursor is no longer a wait/busy cursor (e.g. after save)
+WaitForCursorNormal() {
+    hWait     := DllCall("LoadCursor", "Ptr", 0, "Ptr", 32514, "Ptr")
+    hAppStart := DllCall("LoadCursor", "Ptr", 0, "Ptr", 32650, "Ptr")
+    loop {
+        if (DllCall("GetCursor", "Ptr") != hWait
+         && DllCall("GetCursor", "Ptr") != hAppStart)
+            break
+        Sleep 100
+    }
+}
+
 ; ── FAMOUS keyboard shortcuts ─────────────────────────────────────────────────
 FamSave()   => Send("^s")
 FamFirst()  => Send("{F5}")
