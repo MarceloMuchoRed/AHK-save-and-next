@@ -95,7 +95,7 @@ F13:: {
         SetTimer () => ToolTip(), -1500
 
         ; Save every saveEvery rows, then reanchor to first visible empty row
-        if (Mod(productIdx, saveEvery) = 0 && productIdx < total) {
+        if (Mod(productIdx, saveEvery) = 0 && A_Index < products.Length) {
             ToolTip "Saving after " productIdx " of " total " products..."
             FamSave()
             Sleep 10000
