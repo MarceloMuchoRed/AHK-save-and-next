@@ -15,7 +15,7 @@ FIRST_SKU_X := 345   ; TODO: fill in
 FIRST_SKU_Y := 244   ; TODO: fill in
 
 ; ── How many rows to add before saving ───────────────────────────────────────
-saveEvery := 15
+saveEvery := 40
 
 g_paused := false
 
@@ -60,14 +60,18 @@ F13:: {
         }
         ToolTip
 
-        ; Type each of the 10 columns and Tab to the next.
-        ; After the 10th Tab, FAMOUS moves to the next empty row.
+        ; Type each of the 10 CSV columns, then today's date as the 11th.
+        ; After the 11th Tab, FAMOUS moves to the next empty row.
         loop 10 {
             Send Trim(product[A_Index])
             Sleep 100
             Send "{Tab}"
             Sleep 150
         }
+        Send FormatTime(, "MM/dd/yyyy")
+        Sleep 100
+        Send "{Tab}"
+        Sleep 150
 
         FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | SKU " Trim(product[1]) " | OK`n", logFile
         ToolTip "Product " productIdx " of " total " (SKU " Trim(product[1]) ")"
