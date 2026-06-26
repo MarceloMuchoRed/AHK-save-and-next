@@ -36,7 +36,7 @@ F13:: {
     loop read csvFile {
         if (Trim(A_LoopReadLine) = "")
             continue
-        cols := StrSplit(A_LoopReadLine, ",")
+        cols := ParseCSVLine(A_LoopReadLine)
         if (cols.Length < 10)
             continue
         products.Push(cols)

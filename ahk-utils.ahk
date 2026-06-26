@@ -30,3 +30,31 @@ TypeSlow(text, delay := 15) {
         Sleep delay
     }
 }
+
+; Proper CSV line parser — handles quoted fields and commas inside values
+ParseCSVLine(line) {
+    fields    := []
+    current   := ""
+    inQuotes  := false
+    i         := 1
+    len       := StrLen(line)
+    while i <= len {
+        char := SubStr(line, i, 1)
+        if (char = '"') {
+            if (inQuotes && SubStr(line, i + 1, 1) = '"') {
+                current .= '"'
+                i += 2
+                continue
+            }
+            inQuotes := !inQuotes
+        } else if (char = "," && !inQuotes) {
+            fields.Push(current)
+            current := ""
+        } else {
+            current .= char
+        }
+        i++
+    }
+    fields.Push(current)
+    return fields
+}
