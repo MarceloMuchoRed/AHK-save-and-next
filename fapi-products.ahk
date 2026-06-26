@@ -77,11 +77,24 @@ F13:: {
         }
         ToolTip
 
-        ; Type each of the 10 CSV columns, then today's date as the 11th.
+        ; Type each of the 10 CSV columns, verify each one, then today's date as 11th.
         ; After the 11th Tab, FAMOUS moves to the next empty row.
+        mismatch := false
         loop 10 {
-            TypeSlow(Trim(product[A_Index]))
-            Sleep 50
+            colIdx   := A_Index
+            expected := Trim(product[colIdx])
+            TypeSlow(expected)
+            Sleep 100
+            try {
+                actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                if (actual != expected) {
+                    mismatch := true
+                    FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
+                    ToolTip
+                    MsgBox "Mismatch on row " productIdx " column " colIdx ":`nExpected: " expected "`nActual:   " actual "`n`nFix it manually then click OK to continue, or F14 to exit."
+                    mismatch := false
+                }
+            }
             Send "{Tab}"
             Sleep 150
         }
