@@ -82,20 +82,19 @@ F13:: {
         loop 10 {
             colIdx   := A_Index
             expected := Trim(product[colIdx])
-            TypeSlow(expected)
+            TypeSlow(expected, 40)
             Sleep 400
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
                 if (expected != "" && actual != expected) {
                     retryOk := false
                     loop 2 {
-                        ; Clear field and retype
-                        Send "^a"
-                        Sleep 100
-                        Send "{Delete}"
-                        Sleep 200
-                        TypeSlow(expected)
-                        Sleep 400
+                        ; Clear field with backspaces and retype slower
+                        loop Max(StrLen(actual), StrLen(expected)) + 3
+                            Send "{Backspace}"
+                        Sleep 300
+                        TypeSlow(expected, 60)
+                        Sleep 500
                         actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
                         if (actual = expected) {
                             retryOk := true
