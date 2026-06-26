@@ -33,6 +33,7 @@ F13:: {
     WinFocus(FAM_WIN)
 
     products := []
+    FileEncoding "UTF-8"
     loop read csvFile {
         if (Trim(A_LoopReadLine) = "")
             continue
