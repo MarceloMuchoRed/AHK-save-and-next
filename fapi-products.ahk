@@ -88,7 +88,7 @@ F13:: {
             Sleep 150
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (expected = "" || actual = expected)
+                if (expected = "" || NormalizeStr(actual) = NormalizeStr(expected))
                     goto FieldDone
 
                 ; Attempt 2: reset to (All) with ( then retype
@@ -99,7 +99,7 @@ F13:: {
                 TypeSlow(expected)
                 Sleep 400
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (actual = expected)
+                if (NormalizeStr(actual) = NormalizeStr(expected))
                     goto FieldDone
 
                 ; Attempt 3: nudge up 3 then down 5 to catch nearby misses
@@ -108,7 +108,7 @@ F13:: {
                     Send "{Up}"
                     Sleep 80
                     actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                    if (actual = expected) {
+                    if (NormalizeStr(actual) = NormalizeStr(expected)) {
                         found := true
                         break
                     }
@@ -118,7 +118,7 @@ F13:: {
                         Send "{Down}"
                         Sleep 80
                         actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                        if (actual = expected) {
+                        if (NormalizeStr(actual) = NormalizeStr(expected)) {
                             found := true
                             break
                         }
@@ -133,7 +133,7 @@ F13:: {
                         Send "{Down}"
                         Sleep 80
                         actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                        if (actual = expected) {
+                        if (NormalizeStr(actual) = NormalizeStr(expected)) {
                             found := true
                             break
                         }

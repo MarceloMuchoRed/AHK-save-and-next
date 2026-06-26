@@ -31,6 +31,14 @@ TypeSlow(text, delay := 15) {
     }
 }
 
+; Normalize Unicode to NFC (precomposed) so ñ == ñ regardless of source encoding
+NormalizeStr(str) {
+    reqLen := DllCall("NormalizeString", "Int", 1, "WStr", str, "Int", -1, "Ptr", 0, "Int", 0)
+    buf := Buffer(reqLen * 2)
+    DllCall("NormalizeString", "Int", 1, "WStr", str, "Int", -1, "Ptr", buf, "Int", reqLen)
+    return StrGet(buf, "UTF-16")
+}
+
 ; Proper CSV line parser — handles quoted fields and commas inside values
 ParseCSVLine(line) {
     fields    := []
