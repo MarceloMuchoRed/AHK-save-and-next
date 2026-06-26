@@ -79,7 +79,6 @@ F13:: {
 
         ; Type each of the 10 CSV columns, verify each one, then today's date as 11th.
         ; After the 11th Tab, FAMOUS moves to the next empty row.
-        mismatch := false
         loop 10 {
             colIdx   := A_Index
             expected := Trim(product[colIdx])
@@ -88,11 +87,26 @@ F13:: {
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
                 if (expected != "" && actual != expected) {
-                    mismatch := true
-                    FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
-                    ToolTip
-                    MsgBox "Mismatch on row " productIdx " column " colIdx ":`nExpected: " expected "`nActual:   " actual "`n`nFix it manually then click OK to continue, or F14 to exit."
-                    mismatch := false
+                    retryOk := false
+                    loop 2 {
+                        ; Clear field and retype
+                        Send "^a"
+                        Sleep 100
+                        Send "{Delete}"
+                        Sleep 200
+                        TypeSlow(expected)
+                        Sleep 400
+                        actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                        if (actual = expected) {
+                            retryOk := true
+                            break
+                        }
+                    }
+                    if !retryOk {
+                        FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
+                        ToolTip
+                        MsgBox "Mismatch on row " productIdx " column " colIdx ":`nExpected: " expected "`nActual:   " actual "`n`nFix it manually then click OK to continue, or F14 to exit."
+                    }
                 }
             }
             Send "{Tab}"
