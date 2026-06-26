@@ -84,13 +84,15 @@ F13:: {
             expected := Trim(product[colIdx])
             ; Attempt 1: full string at once
             SendText expected
-            Sleep 400
+            Sleep 150
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
                 if (expected = "" || actual = expected)
                     goto FieldDone
 
                 ; Attempt 2: reset to (All) with ( then retype
+                Send "("
+                Send "("
                 Send "("
                 Sleep 200
                 TypeSlow(expected)
@@ -101,6 +103,9 @@ F13:: {
 
                 ; Attempt 3: walk the dropdown with Down arrow
                 found := false
+                Send "("
+                Send "("
+                Send "("
                 loop 150 {
                     Send "{Down}"
                     Sleep 80
@@ -118,7 +123,7 @@ F13:: {
             }
             FieldDone:
             Send "{Tab}"
-            Sleep 150
+            Sleep 50
         }
         TypeSlow(FormatTime(, "MM/dd/yyyy"))
         Sleep 50

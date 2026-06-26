@@ -1,45 +1,84 @@
-=== Products batch started 2026-06-25 08:01:35 | 47 products ===
-2026-06-25 08:01:38 | SKU 73882 | OK
-2026-06-25 08:01:41 | SKU 77246 | OK
-2026-06-25 08:01:44 | SKU 77509 | OK
-=== Products batch started 2026-06-25 08:03:07 | 47 products ===
-2026-06-25 08:03:11 | SKU 73882 | OK
-2026-06-25 08:03:14 | SKU 77246 | OK
-2026-06-25 08:03:18 | SKU 77509 | OK
-2026-06-25 08:03:21 | SKU 76887 | OK
-2026-06-25 08:03:24 | SKU 73582 | OK
-2026-06-25 08:03:27 | SKU 77426 | OK
-2026-06-25 08:03:31 | SKU 73906 | OK
-2026-06-25 08:03:34 | SKU 76024 | OK
-=== Products batch started 2026-06-25 08:05:09 | 47 products ===
-2026-06-25 08:05:13 | SKU 73882 | OK
-2026-06-25 08:05:16 | SKU 77246 | OK
-=== Products batch started 2026-06-25 08:08:48 | 47 products ===
-2026-06-25 08:08:51 | SKU 73882 | OK
-2026-06-25 08:08:55 | SKU 77246 | OK
-=== Products batch started 2026-06-25 08:09:48 | 47 products ===
-2026-06-25 08:09:53 | SKU 73882 | OK
-2026-06-25 08:09:57 | SKU 77246 | OK
-=== Products batch started 2026-06-25 08:10:42 | 47 products ===
-2026-06-25 08:10:45 | SKU 73882 | OK
-2026-06-25 08:10:48 | SKU 77246 | OK
-2026-06-25 08:10:51 | SKU 77509 | OK
-=== Products batch started 2026-06-25 08:11:10 | 47 products ===
-2026-06-25 08:11:14 | SKU 73882 | OK
-=== Products batch started 2026-06-25 08:11:34 | 47 products ===
-2026-06-25 08:11:37 | SKU 73882 | OK
-2026-06-25 08:11:40 | SKU 77246 | OK
-2026-06-25 08:11:43 | SKU 77509 | OK
-2026-06-25 08:11:46 | SKU 76887 | OK
-2026-06-25 08:11:48 | SKU 73582 | OK
-2026-06-25 08:11:51 | SKU 77426 | OK
-2026-06-25 08:11:54 | SKU 73906 | OK
-2026-06-25 08:11:56 | SKU 76024 | OK
-2026-06-25 08:11:59 | SKU 74268 | OK
-2026-06-25 08:12:02 | SKU 75293 | OK
-2026-06-25 08:12:04 | SKU 74760 | OK
-2026-06-25 08:12:07 | SKU 74806 | OK
-2026-06-25 08:12:10 | SKU 73799 | OK
-2026-06-25 08:12:13 | SKU 77205 | OK
-2026-06-25 08:12:15 | SKU 76754 | OK
-2026-06-25 08:12:25 | SKU 73658 | OK
+=== Products batch started 2026-06-26 08:13:42 | row 1 | 44 remaining ===
+2026-06-26 08:13:43 | row 1 | SKU marcelo1 | MISMATCH col 2 expected 'SQUASH-W' got 'SQUASH-S'
+2026-06-26 08:16:05 | row 1 | SKU marcelo1 | MISMATCH col 8 expected '' got 'SQUASH-W'
+=== Products batch started 2026-06-26 08:20:42 | row 1 | 44 remaining ===
+2026-06-26 08:20:44 | row 1 | SKU marcelo1 | MISMATCH col 3 expected '' got '( All )'
+=== Products batch started 2026-06-26 08:22:26 | row 1 | 44 remaining ===
+2026-06-26 08:22:33 | row 1 | SKU marcelo1 | OK
+2026-06-26 08:22:34 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'BEETS'
+2026-06-26 08:22:55 | row 2 | SKU marcelo2 | OK
+2026-06-26 08:22:58 | row 3 | SKU marcelo3 | MISMATCH col 5 expected '10#' got '100CT'
+=== Products batch started 2026-06-26 08:25:13 | row 1 | 44 remaining ===
+2026-06-26 08:25:20 | row 1 | SKU marcelo1 | OK
+2026-06-26 08:25:23 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'BEETS'
+2026-06-26 08:25:35 | row 2 | SKU marcelo2 | OK
+2026-06-26 08:25:39 | row 3 | SKU marcelo3 | MISMATCH col 5 expected '10#' got '100CT'
+2026-06-26 08:25:47 | row 3 | SKU marcelo3 | OK
+=== Products batch started 2026-06-26 08:30:23 | row 1 | 44 remaining ===
+2026-06-26 08:30:32 | row 1 | SKU marcelo1 | OK
+2026-06-26 08:30:35 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'BROCCOLI'
+2026-06-26 08:30:51 | row 2 | SKU marcelo2 | MISMATCH col 4 expected 'BAG' got 'BIN'
+2026-06-26 08:30:56 | row 2 | SKU marcelo2 | MISMATCH col 5 expected '10/1.5#DRC' got '( All )'
+=== Products batch started 2026-06-26 08:33:56 | row 1 | 44 remaining ===
+2026-06-26 08:34:02 | row 1 | SKU marcelo1 | OK
+=== Products batch started 2026-06-26 08:37:52 | row 1 | 44 remaining ===
+2026-06-26 08:37:59 | row 1 | SKU marcelo1 | OK
+2026-06-26 08:38:12 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'WATERMELON'
+=== Products batch started 2026-06-26 08:38:41 | row 1 | 44 remaining ===
+2026-06-26 08:38:47 | row 1 | SKU marcelo1 | OK
+=== Products batch started 2026-06-26 08:39:31 | row 1 | 44 remaining ===
+2026-06-26 08:39:40 | row 1 | SKU marcelo1 | OK
+2026-06-26 08:39:47 | row 2 | SKU marcelo2 | OK
+2026-06-26 08:39:54 | row 3 | SKU marcelo3 | OK
+2026-06-26 08:40:01 | row 4 | SKU marcelo4 | OK
+2026-06-26 08:40:08 | row 5 | SKU marcelo5 | OK
+2026-06-26 08:40:14 | row 6 | SKU marcelo6 | OK
+2026-06-26 08:40:30 | row 7 | SKU marcelo7 | OK
+2026-06-26 08:40:45 | row 8 | SKU marcelo8 | OK
+2026-06-26 08:41:01 | row 9 | SKU marcelo9 | OK
+2026-06-26 08:41:16 | row 10 | SKU marcelo10 | OK
+2026-06-26 08:41:23 | row 11 | SKU marcelo11 | OK
+2026-06-26 08:41:29 | row 12 | SKU marcelo12 | OK
+2026-06-26 08:41:35 | row 13 | SKU marcelo13 | OK
+2026-06-26 08:41:41 | row 14 | SKU marcelo14 | OK
+2026-06-26 08:41:47 | row 15 | SKU marcelo15 | OK
+2026-06-26 08:41:53 | row 16 | SKU marcelo16 | OK
+2026-06-26 08:41:59 | row 17 | SKU marcelo17 | OK
+2026-06-26 08:42:05 | row 18 | SKU marcelo18 | OK
+2026-06-26 08:42:12 | row 19 | SKU marcelo19 | OK
+2026-06-26 08:42:18 | row 20 | SKU marcelo20 | OK
+2026-06-26 08:42:29 | row 21 | SKU marcelo21 | OK
+2026-06-26 08:42:35 | row 22 | SKU marcelo22 | OK
+2026-06-26 08:42:42 | row 23 | SKU marcelo23 | OK
+2026-06-26 08:42:49 | row 24 | SKU marcelo24 | OK
+2026-06-26 08:42:59 | row 25 | SKU marcelo25 | OK
+2026-06-26 08:43:05 | row 26 | SKU marcelo26 | OK
+2026-06-26 08:43:11 | row 27 | SKU marcelo27 | OK
+2026-06-26 08:43:17 | row 28 | SKU marcelo28 | OK
+2026-06-26 08:43:23 | row 29 | SKU marcelo29 | OK
+2026-06-26 08:43:31 | row 30 | SKU marcelo30 | OK
+2026-06-26 08:43:47 | row 31 | SKU marcelo31 | OK
+2026-06-26 08:43:54 | row 32 | SKU marcelo32 | OK
+2026-06-26 08:44:00 | row 33 | SKU marcelo33 | OK
+2026-06-26 08:44:07 | row 34 | SKU marcelo34 | OK
+2026-06-26 08:44:14 | row 35 | SKU marcelo35 | OK
+2026-06-26 08:44:20 | row 36 | SKU marcelo36 | OK
+2026-06-26 08:44:26 | row 37 | SKU marcelo37 | OK
+2026-06-26 08:44:32 | row 38 | SKU marcelo38 | OK
+2026-06-26 08:44:38 | row 39 | SKU marcelo39 | OK
+2026-06-26 08:44:44 | row 40 | SKU marcelo40 | OK
+2026-06-26 08:44:50 | row 41 | SKU marcelo41 | OK
+2026-06-26 08:44:56 | row 42 | SKU marcelo42 | OK
+2026-06-26 08:45:02 | row 43 | SKU marcelo43 | OK
+2026-06-26 08:45:08 | row 44 | SKU marcelo44 | OK
+=== Batch done 2026-06-26 08:45:18 ===
+
+=== Products batch started 2026-06-26 08:47:01 | row 1 | 44 remaining ===
+2026-06-26 08:47:04 | row 1 | SKU marcelo1 | OK
+=== Products batch started 2026-06-26 08:47:14 | row 1 | 44 remaining ===
+2026-06-26 08:47:18 | row 1 | SKU marcelo1 | OK
+2026-06-26 08:47:22 | row 2 | SKU marcelo2 | OK
+2026-06-26 08:47:25 | row 3 | SKU marcelo3 | OK
+2026-06-26 08:47:28 | row 4 | SKU marcelo4 | OK
+2026-06-26 08:47:31 | row 5 | SKU marcelo5 | OK
+2026-06-26 08:47:34 | row 6 | SKU marcelo6 | OK
