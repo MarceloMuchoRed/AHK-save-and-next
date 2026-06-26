@@ -90,9 +90,8 @@ F13:: {
                 if (expected = "" || actual = expected)
                     goto FieldDone
 
-                ; Attempt 2: clear + TypeSlow 15ms
-                loop StrLen(actual) + 5
-                    Send "{Backspace}"
+                ; Attempt 2: reset to (All) with ( then retype
+                Send "("
                 Sleep 200
                 TypeSlow(expected)
                 Sleep 400
