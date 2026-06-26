@@ -82,32 +82,42 @@ F13:: {
         loop 10 {
             colIdx   := A_Index
             expected := Trim(product[colIdx])
-            TypeSlow(expected, 40)
+            ; Attempt 1: full string at once
+            SendText expected
             Sleep 400
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (expected != "" && actual != expected) {
-                    retryOk := false
-                    loop 2 {
-                        ; Clear field with backspaces and retype slower
-                        loop Max(StrLen(actual), StrLen(expected)) + 3
-                            Send "{Backspace}"
-                        Sleep 300
-                        TypeSlow(expected, 60)
-                        Sleep 500
-                        actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                        if (actual = expected) {
-                            retryOk := true
-                            break
-                        }
-                    }
-                    if !retryOk {
-                        FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
-                        ToolTip
-                        MsgBox "Mismatch on row " productIdx " column " colIdx ":`nExpected: " expected "`nActual:   " actual "`n`nFix it manually then click OK to continue, or F14 to exit."
+                if (expected = "" || actual = expected)
+                    goto FieldDone
+
+                ; Attempt 2: clear + TypeSlow 15ms
+                loop StrLen(actual) + 5
+                    Send "{Backspace}"
+                Sleep 200
+                TypeSlow(expected)
+                Sleep 400
+                actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                if (actual = expected)
+                    goto FieldDone
+
+                ; Attempt 3: walk the dropdown with Down arrow
+                found := false
+                loop 150 {
+                    Send "{Down}"
+                    Sleep 80
+                    actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                    if (actual = expected) {
+                        found := true
+                        break
                     }
                 }
+                if !found {
+                    FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
+                    ToolTip
+                    MsgBox "Mismatch on row " productIdx " column " colIdx ":`nExpected: " expected "`nActual:   " actual "`n`nFix it manually then click OK to continue, or F14 to exit."
+                }
             }
+            FieldDone:
             Send "{Tab}"
             Sleep 150
         }
