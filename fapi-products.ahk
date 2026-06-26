@@ -7,6 +7,18 @@
 CoordMode "Mouse", "Client"
 CoordMode "Pixel", "Client"
 
+; Tab away to commit, Shift+Tab back, then read what FAMOUS actually selected
+ReadCommitted() {
+    global FAM_WIN
+    Send "{Tab}"
+    Sleep 200
+    Send "+{Tab}"
+    Sleep 200
+    result := ""
+    try result := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+    return result
+}
+
 csvFile  := A_ScriptDir "\products.csv"
 logFile  := A_ScriptDir "\products.log"
 
@@ -83,16 +95,6 @@ F13:: {
         loop 10 {
             colIdx   := A_Index
             expected := Trim(product[colIdx])
-
-            ReadCommitted() {
-                Send "{Tab}"
-                Sleep 100
-                Send "+{Tab}"
-                Sleep 100
-                result := ""
-                try result := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                return result
-            }
 
             ; Attempt 1: full string at once
             SendText expected
