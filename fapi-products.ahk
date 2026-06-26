@@ -87,7 +87,7 @@ F13:: {
             Sleep 400
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (actual != expected) {
+                if (expected != "" && actual != expected) {
                     mismatch := true
                     FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
                     ToolTip
