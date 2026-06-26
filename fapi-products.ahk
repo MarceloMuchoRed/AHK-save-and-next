@@ -15,7 +15,7 @@ FIRST_SKU_X := 345   ; TODO: fill in
 FIRST_SKU_Y := 244   ; TODO: fill in
 
 ; ── How many rows to add before saving ───────────────────────────────────────
-saveEvery := 25
+saveEvery := 30
 
 ; ── Resume: set to the row number to start from (1 = beginning) ──────────────
 startRow  := 1
@@ -84,7 +84,7 @@ F13:: {
             colIdx   := A_Index
             expected := Trim(product[colIdx])
             TypeSlow(expected)
-            Sleep 100
+            Sleep 400
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
                 if (actual != expected) {
