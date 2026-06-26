@@ -90,12 +90,12 @@ F13:: {
                 if (expected = "" || actual = expected)
                     goto FieldDone
 
-                ; Attempt 2: reset to (All) with ( then retype slowly (150ms lets FAMOUS re-enter filter mode)
+                ; Attempt 2: reset to (All) with ( then retype
                 Send "("
                 Send "("
                 Send "("
                 Sleep 200
-                TypeSlow(expected, 150)
+                TypeSlow(expected)
                 Sleep 400
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
                 if (actual = expected)
