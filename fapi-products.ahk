@@ -133,6 +133,7 @@ F13:: {
                         Send "{Down}"
                         Sleep 80
                         actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                        ToolTip "walking: '" actual "' vs '" expected "'"
                         if (NormalizeStr(actual) = NormalizeStr(expected)) {
                             found := true
                             break
