@@ -101,18 +101,41 @@ F13:: {
                 if (actual = expected)
                     goto FieldDone
 
-                ; Attempt 3: walk the dropdown with Down arrow
+                ; Attempt 3: nudge up 3 then down 5 to catch nearby misses
                 found := false
-                Send "("
-                Send "("
-                Send "("
-                loop 250 {
-                    Send "{Down}"
+                loop 3 {
+                    Send "{Up}"
                     Sleep 80
                     actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
                     if (actual = expected) {
                         found := true
                         break
+                    }
+                }
+                if !found {
+                    loop 5 {
+                        Send "{Down}"
+                        Sleep 80
+                        actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                        if (actual = expected) {
+                            found := true
+                            break
+                        }
+                    }
+                }
+                ; Last resort: reset to top with ( and walk the full list
+                if !found {
+                    Send "("
+                    Send "("
+                    Send "("
+                    loop 250 {
+                        Send "{Down}"
+                        Sleep 80
+                        actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                        if (actual = expected) {
+                            found := true
+                            break
+                        }
                     }
                 }
                 if !found {
