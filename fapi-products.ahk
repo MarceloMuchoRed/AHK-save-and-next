@@ -33,7 +33,6 @@ F13:: {
     WinFocus(FAM_WIN)
 
     products := []
-    FileEncoding "UTF-8"
     loop read csvFile {
         if (Trim(A_LoopReadLine) = "")
             continue
@@ -88,7 +87,7 @@ F13:: {
             Sleep 150
             try {
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (expected = "" || FamMatch(actual, expected))
+                if (expected = "" || actual = expected)
                     goto FieldDone
 
                 ; Attempt 2: reset to (All) with ( then retype
@@ -99,7 +98,7 @@ F13:: {
                 TypeSlow(expected)
                 Sleep 400
                 actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (FamMatch(actual, expected))
+                if (actual = expected)
                     goto FieldDone
 
                 ; Attempt 3: nudge up 3 then down 5 to catch nearby misses
@@ -108,7 +107,7 @@ F13:: {
                     Send "{Up}"
                     Sleep 80
                     actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                    if (FamMatch(actual, expected)) {
+                    if (actual = expected) {
                         found := true
                         break
                     }
@@ -118,7 +117,7 @@ F13:: {
                         Send "{Down}"
                         Sleep 80
                         actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                        if (FamMatch(actual, expected)) {
+                        if (actual = expected) {
                             found := true
                             break
                         }
@@ -133,7 +132,7 @@ F13:: {
                         Send "{Down}"
                         Sleep 80
                         actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                        if (FamMatch(actual, expected)) {
+                        if (actual = expected) {
                             found := true
                             break
                         }
