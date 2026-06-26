@@ -31,6 +31,24 @@ TypeSlow(text, delay := 15) {
     }
 }
 
+; Compare actual (from ControlGetText) to expected (from CSV).
+; FAMOUS returns ? for non-ASCII chars like ñ, so ? in actual matches any char in expected.
+FamMatch(actual, expected) {
+    actual   := NormalizeStr(Trim(actual))
+    expected := NormalizeStr(Trim(expected))
+    if (actual = expected)
+        return true
+    if (StrLen(actual) != StrLen(expected))
+        return false
+    loop StrLen(actual) {
+        a := SubStr(actual, A_Index, 1)
+        e := SubStr(expected, A_Index, 1)
+        if (a != "?" && a != e)
+            return false
+    }
+    return true
+}
+
 ; Normalize Unicode to NFC (precomposed) so ñ == ñ regardless of source encoding
 NormalizeStr(str) {
     reqLen := DllCall("NormalizeString", "Int", 1, "WStr", str, "Int", -1, "Ptr", 0, "Int", 0)
