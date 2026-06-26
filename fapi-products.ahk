@@ -79,71 +79,81 @@ F13:: {
 
         ; Type each of the 10 CSV columns, verify each one, then today's date as 11th.
         ; After the 11th Tab, FAMOUS moves to the next empty row.
+        ; Verification reads AFTER Tab+Shift+Tab so we see what FAMOUS actually committed.
         loop 10 {
             colIdx   := A_Index
             expected := Trim(product[colIdx])
+
+            ReadCommitted() {
+                Send "{Tab}"
+                Sleep 100
+                Send "+{Tab}"
+                Sleep 100
+                result := ""
+                try result := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+                return result
+            }
+
             ; Attempt 1: full string at once
             SendText expected
             Sleep 150
-            try {
-                actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (expected = "" || actual = expected)
-                    goto FieldDone
+            actual := ReadCommitted()
+            if (expected = "" || actual = expected)
+                goto FieldDone
 
-                ; Attempt 2: reset to (All) with ( then retype
-                Send "("
-                Send "("
-                Send "("
-                Sleep 200
-                TypeSlow(expected)
-                Sleep 400
-                actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                if (actual = expected)
-                    goto FieldDone
+            ; Attempt 2: reset to (All) with ( then retype
+            Send "("
+            Send "("
+            Send "("
+            Sleep 200
+            TypeSlow(expected)
+            actual := ReadCommitted()
+            if (actual = expected)
+                goto FieldDone
 
-                ; Attempt 3: nudge up 3 then down 5 to catch nearby misses
-                found := false
-                loop 3 {
-                    Send "{Up}"
-                    Sleep 80
-                    actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
+            ; Attempt 3: nudge up 3 then down 5 to catch nearby misses
+            found := false
+            loop 3 {
+                Send "{Up}"
+                Sleep 50
+                actual := ReadCommitted()
+                if (actual = expected) {
+                    found := true
+                    break
+                }
+            }
+            if !found {
+                loop 5 {
+                    Send "{Down}"
+                    Sleep 50
+                    actual := ReadCommitted()
                     if (actual = expected) {
                         found := true
                         break
                     }
                 }
-                if !found {
-                    loop 5 {
-                        Send "{Down}"
-                        Sleep 80
-                        actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                        if (actual = expected) {
-                            found := true
-                            break
-                        }
+            }
+            ; Last resort: reset to top with ( and walk the full list
+            if !found {
+                Send "("
+                Send "("
+                Send "("
+                loop 250 {
+                    Send "{Down}"
+                    Sleep 50
+                    actual := ReadCommitted()
+                    if (actual = expected) {
+                        found := true
+                        break
                     }
-                }
-                ; Last resort: reset to top with ( and walk the full list
-                if !found {
-                    Send "("
-                    Send "("
-                    Send "("
-                    loop 250 {
-                        Send "{Down}"
-                        Sleep 80
-                        actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
-                        if (actual = expected) {
-                            found := true
-                            break
-                        }
-                    }
-                }
-                if !found {
-                    FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
-                    ToolTip
-                    MsgBox "Mismatch on row " productIdx " column " colIdx ":`nExpected: " expected "`nActual:   " actual "`n`nFix it manually then click OK to continue, or F14 to exit."
                 }
             }
+            if !found {
+                FileAppend FormatTime(, "yyyy-MM-dd HH:mm:ss") " | row " productIdx " | SKU " Trim(product[1]) " | MISMATCH col " colIdx " expected '" expected "' got '" actual "'`n", logFile
+                ToolTip
+                MsgBox "Mismatch on row " productIdx " column " colIdx ":`nExpected: " expected "`nActual:   " actual "`n`nFix it manually then click OK to continue, or F14 to exit."
+            }
+
             FieldDone:
             Send "{Tab}"
             Sleep 50
