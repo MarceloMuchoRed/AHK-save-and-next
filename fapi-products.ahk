@@ -136,10 +136,13 @@ F13:: {
                 }
             }
             ; Last resort: reset to top with ( and walk the full list
+            ; Stop early if value stops changing (end of list reached)
             if !found {
                 Send "("
                 Send "("
                 Send "("
+                prev := ""
+                sameCount := 0
                 loop 250 {
                     Send "{Down}"
                     Sleep 50
@@ -147,6 +150,14 @@ F13:: {
                     if (actual = expected) {
                         found := true
                         break
+                    }
+                    if (actual = prev) {
+                        sameCount++
+                        if (sameCount >= 2)
+                            break
+                    } else {
+                        sameCount := 0
+                        prev := actual
                     }
                 }
             }
