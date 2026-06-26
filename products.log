@@ -1,84 +1,55 @@
-=== Products batch started 2026-06-26 08:13:42 | row 1 | 44 remaining ===
-2026-06-26 08:13:43 | row 1 | SKU marcelo1 | MISMATCH col 2 expected 'SQUASH-W' got 'SQUASH-S'
-2026-06-26 08:16:05 | row 1 | SKU marcelo1 | MISMATCH col 8 expected '' got 'SQUASH-W'
-=== Products batch started 2026-06-26 08:20:42 | row 1 | 44 remaining ===
-2026-06-26 08:20:44 | row 1 | SKU marcelo1 | MISMATCH col 3 expected '' got '( All )'
-=== Products batch started 2026-06-26 08:22:26 | row 1 | 44 remaining ===
-2026-06-26 08:22:33 | row 1 | SKU marcelo1 | OK
-2026-06-26 08:22:34 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'BEETS'
-2026-06-26 08:22:55 | row 2 | SKU marcelo2 | OK
-2026-06-26 08:22:58 | row 3 | SKU marcelo3 | MISMATCH col 5 expected '10#' got '100CT'
-=== Products batch started 2026-06-26 08:25:13 | row 1 | 44 remaining ===
-2026-06-26 08:25:20 | row 1 | SKU marcelo1 | OK
-2026-06-26 08:25:23 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'BEETS'
-2026-06-26 08:25:35 | row 2 | SKU marcelo2 | OK
-2026-06-26 08:25:39 | row 3 | SKU marcelo3 | MISMATCH col 5 expected '10#' got '100CT'
-2026-06-26 08:25:47 | row 3 | SKU marcelo3 | OK
-=== Products batch started 2026-06-26 08:30:23 | row 1 | 44 remaining ===
-2026-06-26 08:30:32 | row 1 | SKU marcelo1 | OK
-2026-06-26 08:30:35 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'BROCCOLI'
-2026-06-26 08:30:51 | row 2 | SKU marcelo2 | MISMATCH col 4 expected 'BAG' got 'BIN'
-2026-06-26 08:30:56 | row 2 | SKU marcelo2 | MISMATCH col 5 expected '10/1.5#DRC' got '( All )'
-=== Products batch started 2026-06-26 08:33:56 | row 1 | 44 remaining ===
-2026-06-26 08:34:02 | row 1 | SKU marcelo1 | OK
-=== Products batch started 2026-06-26 08:37:52 | row 1 | 44 remaining ===
-2026-06-26 08:37:59 | row 1 | SKU marcelo1 | OK
-2026-06-26 08:38:12 | row 2 | SKU marcelo2 | MISMATCH col 2 expected 'BEAN' got 'WATERMELON'
-=== Products batch started 2026-06-26 08:38:41 | row 1 | 44 remaining ===
-2026-06-26 08:38:47 | row 1 | SKU marcelo1 | OK
-=== Products batch started 2026-06-26 08:39:31 | row 1 | 44 remaining ===
-2026-06-26 08:39:40 | row 1 | SKU marcelo1 | OK
-2026-06-26 08:39:47 | row 2 | SKU marcelo2 | OK
-2026-06-26 08:39:54 | row 3 | SKU marcelo3 | OK
-2026-06-26 08:40:01 | row 4 | SKU marcelo4 | OK
-2026-06-26 08:40:08 | row 5 | SKU marcelo5 | OK
-2026-06-26 08:40:14 | row 6 | SKU marcelo6 | OK
-2026-06-26 08:40:30 | row 7 | SKU marcelo7 | OK
-2026-06-26 08:40:45 | row 8 | SKU marcelo8 | OK
-2026-06-26 08:41:01 | row 9 | SKU marcelo9 | OK
-2026-06-26 08:41:16 | row 10 | SKU marcelo10 | OK
-2026-06-26 08:41:23 | row 11 | SKU marcelo11 | OK
-2026-06-26 08:41:29 | row 12 | SKU marcelo12 | OK
-2026-06-26 08:41:35 | row 13 | SKU marcelo13 | OK
-2026-06-26 08:41:41 | row 14 | SKU marcelo14 | OK
-2026-06-26 08:41:47 | row 15 | SKU marcelo15 | OK
-2026-06-26 08:41:53 | row 16 | SKU marcelo16 | OK
-2026-06-26 08:41:59 | row 17 | SKU marcelo17 | OK
-2026-06-26 08:42:05 | row 18 | SKU marcelo18 | OK
-2026-06-26 08:42:12 | row 19 | SKU marcelo19 | OK
-2026-06-26 08:42:18 | row 20 | SKU marcelo20 | OK
-2026-06-26 08:42:29 | row 21 | SKU marcelo21 | OK
-2026-06-26 08:42:35 | row 22 | SKU marcelo22 | OK
-2026-06-26 08:42:42 | row 23 | SKU marcelo23 | OK
-2026-06-26 08:42:49 | row 24 | SKU marcelo24 | OK
-2026-06-26 08:42:59 | row 25 | SKU marcelo25 | OK
-2026-06-26 08:43:05 | row 26 | SKU marcelo26 | OK
-2026-06-26 08:43:11 | row 27 | SKU marcelo27 | OK
-2026-06-26 08:43:17 | row 28 | SKU marcelo28 | OK
-2026-06-26 08:43:23 | row 29 | SKU marcelo29 | OK
-2026-06-26 08:43:31 | row 30 | SKU marcelo30 | OK
-2026-06-26 08:43:47 | row 31 | SKU marcelo31 | OK
-2026-06-26 08:43:54 | row 32 | SKU marcelo32 | OK
-2026-06-26 08:44:00 | row 33 | SKU marcelo33 | OK
-2026-06-26 08:44:07 | row 34 | SKU marcelo34 | OK
-2026-06-26 08:44:14 | row 35 | SKU marcelo35 | OK
-2026-06-26 08:44:20 | row 36 | SKU marcelo36 | OK
-2026-06-26 08:44:26 | row 37 | SKU marcelo37 | OK
-2026-06-26 08:44:32 | row 38 | SKU marcelo38 | OK
-2026-06-26 08:44:38 | row 39 | SKU marcelo39 | OK
-2026-06-26 08:44:44 | row 40 | SKU marcelo40 | OK
-2026-06-26 08:44:50 | row 41 | SKU marcelo41 | OK
-2026-06-26 08:44:56 | row 42 | SKU marcelo42 | OK
-2026-06-26 08:45:02 | row 43 | SKU marcelo43 | OK
-2026-06-26 08:45:08 | row 44 | SKU marcelo44 | OK
-=== Batch done 2026-06-26 08:45:18 ===
-
-=== Products batch started 2026-06-26 08:47:01 | row 1 | 44 remaining ===
-2026-06-26 08:47:04 | row 1 | SKU marcelo1 | OK
-=== Products batch started 2026-06-26 08:47:14 | row 1 | 44 remaining ===
-2026-06-26 08:47:18 | row 1 | SKU marcelo1 | OK
-2026-06-26 08:47:22 | row 2 | SKU marcelo2 | OK
-2026-06-26 08:47:25 | row 3 | SKU marcelo3 | OK
-2026-06-26 08:47:28 | row 4 | SKU marcelo4 | OK
-2026-06-26 08:47:31 | row 5 | SKU marcelo5 | OK
-2026-06-26 08:47:34 | row 6 | SKU marcelo6 | OK
+=== Products batch started 2026-06-26 08:49:48 | row 1 | 4768 remaining ===
+2026-06-26 08:50:02 | row 1 | SKU 34665 | MISMATCH col 5 expected '15#' got '20#'
+=== Products batch started 2026-06-26 08:50:18 | row 1 | 4768 remaining ===
+=== Products batch started 2026-06-26 08:52:13 | row 1 | 4763 remaining ===
+2026-06-26 08:52:17 | row 1 | SKU 73482 | OK
+2026-06-26 08:52:21 | row 2 | SKU 73483 | OK
+2026-06-26 08:52:25 | row 3 | SKU 73484 | OK
+2026-06-26 08:52:29 | row 4 | SKU 73485 | OK
+2026-06-26 08:52:32 | row 5 | SKU 73486 | OK
+2026-06-26 08:52:37 | row 6 | SKU 73487 | OK
+2026-06-26 08:52:42 | row 7 | SKU 73488 | OK
+2026-06-26 08:52:45 | row 8 | SKU 73489 | OK
+2026-06-26 08:52:48 | row 9 | SKU 73490 | OK
+2026-06-26 08:52:51 | row 10 | SKU 73491 | OK
+2026-06-26 08:52:53 | row 11 | SKU 73492 | OK
+2026-06-26 08:52:56 | row 12 | SKU 73493 | OK
+2026-06-26 08:52:58 | row 13 | SKU 73494 | OK
+2026-06-26 08:53:01 | row 14 | SKU 73495 | OK
+2026-06-26 08:53:03 | row 15 | SKU 73496 | OK
+2026-06-26 08:53:05 | row 16 | SKU 73497 | OK
+2026-06-26 08:53:20 | row 17 | SKU 73498 | MISMATCH col 9 expected 'Sunfed' got 'Pinos'
+2026-06-26 08:53:39 | row 17 | SKU 73498 | OK
+2026-06-26 08:53:42 | row 18 | SKU 73499 | OK
+2026-06-26 08:53:44 | row 19 | SKU 73500 | OK
+2026-06-26 08:53:46 | row 20 | SKU 73501 | OK
+2026-06-26 08:53:49 | row 21 | SKU 73502 | OK
+2026-06-26 08:53:51 | row 22 | SKU 73503 | OK
+2026-06-26 08:53:54 | row 23 | SKU 73504 | OK
+2026-06-26 08:53:57 | row 24 | SKU 73505 | OK
+2026-06-26 08:54:00 | row 25 | SKU 73506 | OK
+2026-06-26 08:54:02 | row 26 | SKU 73507 | OK
+2026-06-26 08:54:06 | row 27 | SKU 73508 | OK
+2026-06-26 08:54:08 | row 28 | SKU 73509 | OK
+2026-06-26 08:54:13 | row 29 | SKU 73510 | OK
+2026-06-26 08:54:15 | row 30 | SKU 73511 | OK
+2026-06-26 08:54:28 | row 31 | SKU 73512 | OK
+2026-06-26 08:54:31 | row 32 | SKU 73515 | OK
+2026-06-26 08:54:33 | row 33 | SKU 73516 | OK
+2026-06-26 08:54:35 | row 34 | SKU 73517 | OK
+2026-06-26 08:54:38 | row 35 | SKU 73518 | OK
+2026-06-26 08:54:41 | row 36 | SKU 73519 | OK
+2026-06-26 08:54:43 | row 37 | SKU 73520 | OK
+2026-06-26 08:54:47 | row 38 | SKU 73521 | OK
+2026-06-26 08:54:50 | row 39 | SKU 73522 | OK
+2026-06-26 08:54:52 | row 40 | SKU 73523 | OK
+2026-06-26 08:54:59 | row 41 | SKU 73524 | OK
+2026-06-26 08:55:05 | row 42 | SKU 73525 | OK
+2026-06-26 08:55:08 | row 43 | SKU 73526 | OK
+2026-06-26 08:55:10 | row 44 | SKU 73527 | OK
+2026-06-26 08:55:13 | row 45 | SKU 73528 | OK
+2026-06-26 08:55:16 | row 46 | SKU 73529 | OK
+2026-06-26 08:55:30 | row 47 | SKU 73530 | MISMATCH col 9 expected 'Sunfed' got 'Pinos'
+=== Products batch started 2026-06-26 08:57:03 | row 47 | 4717 remaining ===
+2026-06-26 08:57:22 | row 47 | SKU 73530 | OK
+2026-06-26 08:57:42 | row 48 | SKU 73531 | OK

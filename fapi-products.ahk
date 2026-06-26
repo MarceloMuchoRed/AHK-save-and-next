@@ -18,7 +18,7 @@ FIRST_SKU_Y := 244   ; TODO: fill in
 saveEvery := 30
 
 ; ── Resume: set to the row number to start from (1 = beginning) ──────────────
-startRow  := 1
+startRow  := 47
 
 g_paused := false
 
@@ -106,7 +106,7 @@ F13:: {
                 Send "("
                 Send "("
                 Send "("
-                loop 150 {
+                loop 250 {
                     Send "{Down}"
                     Sleep 80
                     actual := Trim(ControlGetText(ControlGetFocus(FAM_WIN), FAM_WIN))
