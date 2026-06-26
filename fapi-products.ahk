@@ -49,7 +49,7 @@ F13:: {
         if (Trim(A_LoopReadLine) = "")
             continue
         cols := ParseCSVLine(A_LoopReadLine)
-        if (cols.Length < 10)
+        if (cols.Length < 9)
             continue
         products.Push(cols)
     }
@@ -92,7 +92,7 @@ F13:: {
         ; Type each of the 10 CSV columns, verify each one, then today's date as 11th.
         ; After the 11th Tab, FAMOUS moves to the next empty row.
         ; Verification reads AFTER Tab+Shift+Tab so we see what FAMOUS actually committed.
-        loop 10 {
+        loop 9 {
             colIdx   := A_Index
             expected := Trim(product[colIdx])
 
